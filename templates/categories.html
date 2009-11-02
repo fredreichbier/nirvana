@@ -6,6 +6,8 @@
     {% endif %}
     {% for category in categories %}
         <li><a href="{% url nirvana.pkg.views.category slug=category.slug %}">{{ category.name }}</a></li>
+    {% empty %}
+    No categories.
     {% endfor %}
     </ul>
 {% endblock %}

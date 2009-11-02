@@ -14,6 +14,8 @@
         {% ifnotequal version package.latest_version %}
             <li><a href="{% url nirvana.pkg.views.version slug=package.slug version_slug=version.slug %}">{{ version.slug }} {{ package.latest_version.name }}</a></li>
         {% endifnotequal %}
+    {% empty %}
+    No versions.
     {% endfor %}
     </ul>
 {% endblock %}
