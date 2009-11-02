@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+    <h2>{{ category.name }}</h2>
+    <ul>
+    {% for package in packages %}
+        <li><a href="{% url oocuse.pkg.views.package slug=package.slug %}">{{ package.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% endblock %}

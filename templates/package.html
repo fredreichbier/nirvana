@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+    <h2>{{ package.name }}</h2>
+    <ul>
+    <li><a href="{% url oocuse.pkg.views.version slug=package.slug version_slug="latest" %}">{{ package.latest_version.slug }} {{ package.latest_latest_version.name }}</a></li>
+    {% for version in versions %}
+        {% ifnotequal version package.latest_version %}
+            <li><a href="{% url oocuse.pkg.views.version slug=package.slug version_slug=version.slug %}">{{ version.slug }} {{ package.latest_version.name }}</a></li>
+        {% endifnotequal %}
+    {% endfor %}
+    </ul>
+{% endblock %}

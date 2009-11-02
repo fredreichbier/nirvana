@@ -1,0 +1,5 @@
+{% extends "package.html" %}
+{% block content %}
+You have selected {{ package.name }} {{ version }}: <a href="{% url oocuse.pkg.views.usefile slug=package.slug version_slug=version.slug usefile=package.slug %}">click</a>
+{{ block.super }}
+{% endblock %}

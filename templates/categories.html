@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block content %}
+    {% for category in categories %}
+        <a href="{% url oocuse.pkg.views.category slug=category.slug %}">{{ category.name }}</a>
+    {% endfor %}
+{% endblock %}

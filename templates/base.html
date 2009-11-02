@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+ lang="en" dir="ltr">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>ooc meatshop</title>
+
+  <link rel="stylesheet" type="text/css" href="/site_media/design.css" />
+  </head>
+<body>
+
+<div class="dokuwiki">
+  
+  <div class="stylehead">
+
+    <div class="header">
+      <div class="logo">
+        <a href="/"  id="dokuwiki__top">ooc</a>      </div>
+      <div class="tagline">
+         meatshop.
+	 </div>
+
+      <div class="clearer"></div>
+    </div>
+
+    
+  </div>
+  
+  
+  <div id='sidebar'>
+        <a href="/categories" class="wikilink1">categories</a><br/>
+        {% if user.is_authenticated %}
+       	<a href="/accounts/password/change" class="wikilink1">change password</a><br/>
+       	<a href="/accounts/logout" class="wikilink1">logout</a><br/>
+        {% else %}
+	<a href="/accounts/login" class="wikilink1">login</a><br/>
+       	<a href="/accounts/register" class="wikilink1">register</a><br/>
+        {% endif %}
+</div>
+<div class="page_with_sidebar">
+{% block content %}{% endblock %}
+</div>
+</div>
+
+</body>
+</html>
+
+
