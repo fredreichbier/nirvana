@@ -1,0 +1,27 @@
+# You have to modify this file and rename it to `server_settings.py`
+# in order to get a working copy of nirvana.
+# All these values are ordinary django config values and documented
+# in its documentation.
+
+ADMINS = ()
+
+MEDIA_ROOT = ''
+
+# Make this unique, and don't share it with anybody.
+SECRET_KEY = ''
+
+TEMPLATE_DIRS = (
+    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
+    # Always use forward slashes, even on Windows.
+    # Don't forget to use absolute paths, not relative paths.
+)
+
+EMAIL_HOST = ''
+EMAIL_HOST_PASSWORD = ''
+EMAIL_HOST_USER = ''
+EMAIL_PORT = 2626
+EMAIL_SUBJECT_PREFIX = ''
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = ''
+
+ACCOUNT_ACTIVATION_DAYS = 7
