@@ -1,0 +1,9 @@
+{% load humanize %}
+Cheers!
+
+Someone has joined the ooc nirvana using this email. If it was you, and you want to activate your account, visit the following url:
+
+http://nirvana.ooc-lang.org/accounts/activate/{{ activation_key }}
+
+If it was not you, just do nothing, you will not receive any further emails from us, the activation key will automatically expire
+in {{ expiration_days|apnumber }} days.

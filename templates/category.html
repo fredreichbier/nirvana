@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
-    <h2>{{ category.name }}</h2>
+    <h2>{{ category_name }}</h2>
     <ul>
     {% for package in packages %}
-        <li><a href="{% url oocuse.pkg.views.package slug=package.slug %}">{{ package.name }}</a></li>
+        <li><a href="{% url nirvana.pkg.views.package slug=package.slug %}">{{ package.name }}</a></li>
     {% endfor %}
     </ul>
 {% endblock %}

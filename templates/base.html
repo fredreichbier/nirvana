@@ -31,6 +31,7 @@
   <div id='sidebar'>
         <a href="/categories" class="wikilink1">categories</a><br/>
         {% if user.is_authenticated %}
+        <a href="/package/new" class="wikilink1">new package</a><br/>
        	<a href="/accounts/password/change" class="wikilink1">change password</a><br/>
        	<a href="/accounts/logout" class="wikilink1">logout</a><br/>
         {% else %}
