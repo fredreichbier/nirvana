@@ -9,7 +9,7 @@ from nirvana.pkg.forms import NewPackageForm, NewVersionForm
 def categories(request):
     categories = Category.objects.all()
     return render_to_response(
-            'categories.html',
+            'pkg/categories.html',
             {'categories': categories},
             context_instance=RequestContext(request),
             )
@@ -28,7 +28,7 @@ def category(request, slug):
         packages = Package.objects.filter(category=category)
         category_name = category.name
     return render_to_response(
-            'category.html',
+            'pkg/category.html',
             {
                 'category_name': category_name,
                 'packages': packages,
@@ -40,7 +40,7 @@ def package(request, slug):
     package = get_object_or_404(Package, slug=slug)
     versions = Version.objects.filter(package=package)
     return render_to_response(
-            'package.html',
+            'pkg/package.html',
             {
                 'package': package,
                 'versions': versions,
@@ -55,7 +55,7 @@ def version(request, slug, version_slug):
     else:
         version = get_object_or_404(Version, slug=version_slug)
     return render_to_response(
-            'version.html',
+            'pkg/version.html',
             {
                 'package': package,
                 'version': version
@@ -89,7 +89,7 @@ def package_new(request):
         form = NewPackageForm()
     # if it's invalid or initial, display it.
     return render_to_response(
-            'package_new.html',
+            'pkg/package_new.html',
             {
                 'form': form,
             },
@@ -121,7 +121,7 @@ def version_new(request, slug):
             form = NewVersionForm()
         # if it's invalid or initial, display it.
         return render_to_response(
-                'version_new.html',
+                'pkg/version_new.html',
                 {
                     'form': form,
                 },
