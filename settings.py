@@ -1,14 +1,11 @@
 # Django settings for nirvana project.
 
-DEBUG = True
-TEMPLATE_DEBUG = DEBUG
-
 from server_settings import *
 
 MANAGERS = ADMINS
 
 DATABASE_ENGINE = 'sqlite3'           # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-DATABASE_NAME = 'nirvana.sqlite'             # Or path to database file if using sqlite3.
+#DATABASE_NAME = 'nirvana.sqlite'             # Or path to database file if using sqlite3. # see server_settings
 DATABASE_USER = ''             # Not used with sqlite3.
 DATABASE_PASSWORD = ''         # Not used with sqlite3.
 DATABASE_HOST = ''             # Set to empty string for localhost. Not used with sqlite3.

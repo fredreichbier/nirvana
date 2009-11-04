@@ -3,6 +3,10 @@
 # All these values are ordinary django config values and documented
 # in its documentation.
 
+DEBUG = True
+TEMPLATE_DEBUG = True
+DATABASE_NAME = 'nirvana.sqlite'
+
 ADMINS = ()
 
 MEDIA_ROOT = ''
