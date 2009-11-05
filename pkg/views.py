@@ -1,10 +1,12 @@
 from django.http import HttpResponse, Http404
+from django.core import serializers, urlresolvers
 from django.template import RequestContext
 from django.shortcuts import render_to_response, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 
 from nirvana.pkg.models import Category, Package, Version
 from nirvana.pkg.forms import NewPackageForm, NewVersionForm
+from nirvana.pkg.stuff import json_view
 
 def categories(request):
     categories = Category.objects.all()
@@ -127,3 +129,68 @@ def version_new(request, slug):
                 },
                 context_instance=RequestContext(request),
                 )
+
+def _get_type(request, choices):
+    t = request.GET.get('type', choices[0])
+    if t not in choices:
+        raise Http404("Unknown type: %s" % t)
+    return t
+
+# API
+
+@json_view
+def api_categories(request):
+    type = _get_type(request, ('contents', 'details'))
+    if type == 'contents':
+        return dict((c.slug, c.name) for c in Category.objects.all())
+    else:
+        categories = [category.slug for category in Category.objects.all()]
+        return {'categories': categories}
+
+@json_view
+def api_category(request, slug):
+    category = get_object_or_404(Category, slug=slug)
+    packages = Package.objects.filter(category=category)
+    type = _get_type(request, ('contents', 'details'))
+    if type == 'contents':
+        return dict((package.slug, package.name) for package in packages)
+    else:
+        return {
+            'slug': category.slug,
+            'name': category.name,
+            'packages': [p.slug for p in packages]
+        }
+
+@json_view
+def api_package(request, slug):
+    package = get_object_or_404(Package, slug=slug)
+    versions = Version.objects.filter(package=package)
+    type = _get_type(request, ('contents', 'details'))
+    if type == 'contents':
+        return dict((v.slug, v.name) for v in versions)
+    else:
+        return {
+                'slug': package.slug,
+                'name': package.name,
+                'author': package.author.username,
+                'homepage': package.homepage,
+                'latest_version': package.latest_version.slug,
+                'category': package.category.slug,
+                'versions': [v.slug for v in versions]
+        }
+
+@json_view
+def api_version(request, slug, version_slug):
+    package = get_object_or_404(Package, slug=slug)
+    if version_slug is None:
+        version = package.latest_version
+    else:
+        version = get_object_or_404(Version, package=package, slug=version_slug)
+    return {
+            'slug': version.slug,
+            'name': version.name,
+            'package': version.package.slug,
+            'usefile': urlresolvers.reverse('nirvana.pkg.views.usefile',
+                kwargs={'slug': slug, 'version_slug': version_slug, 'usefile': slug},
+            )
+        }

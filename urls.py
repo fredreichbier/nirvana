@@ -21,4 +21,11 @@ urlpatterns = patterns('',
     (r'^accounts/', include('registration.backends.default.urls')),
 
     (r'^site_media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': '/home/fred/dev/ooc/nirvana/media'}), # TODO: only for development
+
+    # api
+    (r'^api/categories/$', 'nirvana.pkg.views.api_categories'),
+    (r'^api/category/(?P<slug>[-\w]+)/$', 'nirvana.pkg.views.api_category'),
+    (r'^api/packages/(?P<slug>[-\w]+)/$', 'nirvana.pkg.views.api_package'),
+    (r'^api/packages/(?P<slug>[-\w]+)/latest$', 'nirvana.pkg.views.api_version', {'version_slug': None}),
+    (r'^api/packages/(?P<slug>[-\w]+)/(?P<version_slug>[-\w.]+)/$', 'nirvana.pkg.views.api_version'),
 )
