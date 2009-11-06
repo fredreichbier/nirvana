@@ -5,7 +5,7 @@ from django.shortcuts import render_to_response, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 
 from nirvana.pkg.models import Category, Package, Version
-from nirvana.pkg.forms import NewPackageForm, NewVersionForm
+from nirvana.pkg.forms import NewPackageForm, NewVersionForm, NewCategoryForm
 from nirvana.pkg.stuff import json_view
 
 def categories(request):
@@ -92,6 +92,25 @@ def package_new(request):
     # if it's invalid or initial, display it.
     return render_to_response(
             'pkg/package_new.html',
+            {
+                'form': form,
+            },
+            context_instance=RequestContext(request),
+            )
+
+@login_required
+def category_new(request):
+    if request.method == 'POST':
+        form = NewCategoryForm(request.POST)
+        if form.is_valid():
+            # do it.
+            category = form.save(commit=True)
+            return redirect('nirvana.pkg.views.category', slug=category.slug)
+    else:
+        form = NewCategoryForm()
+    # if it's invalid or initial, display it.
+    return render_to_response(
+            'pkg/category_new.html',
             {
                 'form': form,
             },
