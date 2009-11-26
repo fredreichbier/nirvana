@@ -203,6 +203,7 @@ def api_version(request, slug, version_slug):
     package = get_object_or_404(Package, slug=slug)
     if version_slug is None:
         version = package.latest_version
+        version_slug = 'latest'
     else:
         version = get_object_or_404(Version, package=package, slug=version_slug)
     return {
