@@ -3,8 +3,37 @@
 {% block content %}
 
 <form method="post" action="">
-<table>{{ form.as_table }}</table>
-<input type="submit" value="new" />
+    <div class="fieldWrapper">
+        {{ form.slug.errors }}
+        <label for="id_slug">Slug:</label>
+        {{ form.slug }}
+        <p>The version slug is the short, mostly numeric identifier of the version; it also will be used
+        for url construction.<br/>
+        Example: <em>0.1</em><br/>
+        The special version slug <em>vcs</em> is for usefiles that describe the bleeding-edge
+        development version.</p>    
+    </div>
+    <div class="fieldWrapper">
+        {{ form.name.errors }}
+        <label for="id_name">Name (optional):</label>
+        {{ form.name }}
+        <p>The version name is the codename of the version, if any. You can also leave it out.</br>
+        Example: <em>Hardy Heron</em></p>
+    </div>
+    <div class="fieldWrapper">
+        {{ form.usefile.errors }}
+        <label for="id_usefile">Usefile:</label>
+        {{ form.usefile }}
+        <p>The contents of the usefile of the version. Make sure there is an <em>Origin</em> value given,
+        otherwise people won't be able to use this nirvana record to install the package.</p>
+    </div>
+    <div class="fieldWrapper">
+        {{ form.make_latest.errors }}
+        <label for="id_make_latest">Make latest version:</label>
+        {{ form.make_latest }}
+        <p>Activate if you want to have this as the latest (= default) version.</p>
+    </div>
+    <input type="submit" value="new" />
 </form>
 
 {% endblock %}

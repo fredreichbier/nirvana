@@ -3,8 +3,34 @@
 {% block content %}
 
 <form method="post" action="">
-<table>{{ form.as_table }}</table>
-<input type="submit" value="new" />
+    <div class="fieldWrapper">
+        {{ form.slug.errors }}
+        <label for="id_slug">Slug:</label>
+        {{ form.slug }}
+        <p>The package slug is a short identifier that is used for url construction.<br/>
+        That is <strong>required</strong> to be the name of the usefile.<br/>
+        Example: <em>gtk</em> where the usefile is named <em>gtk.use</em></p>
+    </div>
+    <div class="fieldWrapper">
+        {{ form.name.errors }}
+        <label for="id_name">Name:</label>
+        {{ form.name }}
+        <p>The package name is the longer, human-readable name of the package.<br/>
+        Example: <em>ooc-gtk</em></p>
+    </div>
+    <div class="fieldWrapper">
+        {{ form.homepage.errors }}
+        <label for="id_homepage">Homepage:</label>
+        {{ form.homepage }}
+        <p>The homepage of your package. If you have none, just leave it out.</p>
+    </div>
+    <div class="fieldWrapper">
+        {{ form.category.errors }}
+        <label for="id_category">Category:</label>
+        {{ form.category }}
+        <p>The category of your package - if no category matches, <a href="/category/new">create one</a>.</p>
+    </div>
+    <input type="submit" value="new" />
 </form>
 
 {% endblock %}

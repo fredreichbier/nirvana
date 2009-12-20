@@ -16,7 +16,7 @@ class Package(models.Model):
 
 class Version(models.Model):
     slug = DBVersionSlugField(max_length=50)
-    name = models.CharField(max_length=128)
+    name = models.CharField('Name', max_length=128, blank=True)
     package = models.ForeignKey('Package')
     usefile = models.TextField()
 

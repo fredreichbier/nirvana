@@ -2,9 +2,22 @@
 
 {% block content %}
 
-<form method="post" action="">
-<table>{{ form.as_table }}</table>
-<input type="submit" value="new" />
+<form action="" method="POST">
+    <div class="fieldWrapper">
+        {{ form.slug.errors }}
+        <label for="id_slug">Slug:</label>
+        {{ form.slug }}
+        <p>A slug is a short identifier that will used in URLs to identify this category.<br/>
+        Example: <em>ui-libs</em></p>
+    </div>
+    <div class="fieldWrapper">
+        {{ form.name.errors }}
+        <label for="id_name">Name</label>
+        {{ form.name }}
+        <p>The category name is the human-readable name of the category.<br/>
+        Example: <em>User Interface libraries</em></p>
+    </div>
+    <p><input type="submit" value="new" /></p>
 </form>
 
 {% endblock %}
