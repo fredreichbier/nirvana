@@ -55,7 +55,7 @@ def version(request, slug, version_slug):
     if version_slug is None: # display latest version
         version = package.latest_version
     else:
-        version = get_object_or_404(Version, slug=version_slug)
+        version = get_object_or_404(Version, package=package, slug=version_slug)
     return render_to_response(
             'pkg/version.html',
             {
