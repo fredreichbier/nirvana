@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form method="post" action="">
+    <div class="fieldWrapper">
+        {{ form.slug.errors }}
+        <label for="id_slug">Slug:</label>
+        {{ form.slug }}
+    </div>
+    <div class="fieldWrapper">
+        {{ form.name.errors }}
+        <label for="id_name">Name (optional):</label>
+        {{ form.name }}
+    </div>
+    <div class="fieldWrapper">
+        {{ form.usefile.errors }}
+        <label for="id_usefile">Usefile:</label>
+        {{ form.usefile }}
+    </div>
+    <input type="submit" value="edit" />
+</form>
+
+{% endblock %}
+

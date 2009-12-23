@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form method="post" action="">
+    <div class="fieldWrapper">
+        {{ form.name.errors }}
+        <label for="id_name">Name:</label>
+        {{ form.name }}
+    </div>
+    <div class="fieldWrapper">
+        {{ form.homepage.errors }}
+        <label for="id_homepage">Homepage:</label>
+        {{ form.homepage }}
+    </div>
+    <div class="fieldWrapper">
+        {{ form.category.errors }}
+        <label for="id_category">Category:</label>
+        {{ form.category }}
+    </div>
+    <div class="fieldWrapper">
+        {{ form.latest_version.errors }}
+        <label for="id_latest_version">Latest Version:</label>
+        {{ form.latest_version }}
+    </div>
+    <input type="submit" value="edit" />
+</form>
+
+{% endblock %}

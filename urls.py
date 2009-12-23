@@ -13,6 +13,9 @@ urlpatterns = patterns('',
     (r'^category/(?P<slug>[-\w]+)/$', 'nirvana.pkg.views.category'),
     (r'^package/new/$', 'nirvana.pkg.views.package_new'),
     (r'^package/(?P<slug>[-\w]+)/new/$', 'nirvana.pkg.views.version_new'),
+    (r'^package/(?P<slug>[-\w]+)/edit/$', 'nirvana.pkg.views.package_edit'),
+    (r'^package/(?P<slug>[-\w]+)/latest/edit/$', 'nirvana.pkg.views.version_edit', {'version_slug': None}),
+    (r'^package/(?P<slug>[-\w]+)/(?P<version_slug>[-\w.]+)/edit/$', 'nirvana.pkg.views.version_edit'), # TODO: fix the version regex
     (r'^packages/(?P<slug>[-\w]+)/$', 'nirvana.pkg.views.package'),
     (r'^packages/(?P<slug>[-\w]+)/latest/$', 'nirvana.pkg.views.version', {'version_slug': None}),
     (r'^packages/(?P<slug>[-\w]+)/(?P<version_slug>[-\w.]+)/$', 'nirvana.pkg.views.version'), # TODO: fix the version regex

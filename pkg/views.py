@@ -5,7 +5,7 @@ from django.shortcuts import render_to_response, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 
 from nirvana.pkg.models import Category, Package, Version
-from nirvana.pkg.forms import NewPackageForm, NewVersionForm, NewCategoryForm
+from nirvana.pkg.forms import EditPackageForm, NewPackageForm, EditVersionForm, NewVersionForm, NewCategoryForm
 from nirvana.pkg.stuff import json_view
 
 def categories(request):
@@ -60,7 +60,8 @@ def version(request, slug, version_slug):
             'pkg/version.html',
             {
                 'package': package,
-                'version': version
+                'version': version,
+                'versions': Version.objects.filter(package=package),
             },
             context_instance=RequestContext(request),
             )
@@ -118,6 +119,31 @@ def category_new(request):
             )
 
 @login_required
+def package_edit(request, slug):
+    package = get_object_or_404(Package, slug=slug)
+    if request.user != package.author:
+        # oh oh! hacker! let's confuse him with a 404.
+        raise Http404()
+    else:
+        if request.method == 'POST':
+            form = EditPackageForm(request.POST, instance=package)
+            if form.is_valid():
+                # ssssave!
+                form.save()
+                # TODO: check version slug
+                return redirect('nirvana.pkg.views.package', slug=package.slug)
+        else:
+            form = EditPackageForm(instance=package)
+        # if it's invalid or initial, display it.
+        return render_to_response(
+                'pkg/package_edit.html',
+                {
+                    'form': form,
+                },
+                context_instance=RequestContext(request),
+                )
+
+@login_required
 def version_new(request, slug):
     package = get_object_or_404(Package, slug=slug)
     if request.user != package.author:
@@ -143,6 +169,36 @@ def version_new(request, slug):
         # if it's invalid or initial, display it.
         return render_to_response(
                 'pkg/version_new.html',
+                {
+                    'form': form,
+                },
+                context_instance=RequestContext(request),
+                )
+
+@login_required
+def version_edit(request, slug, version_slug):
+    package = get_object_or_404(Package, slug=slug)
+    if version_slug is None: # display latest version
+        version = package.latest_version
+    else:
+        version = get_object_or_404(Version, package=package, slug=version_slug)
+    if request.user != package.author:
+        # oh oh! hacker! let's confuse him with a 404.
+        raise Http404()
+    else:
+        if request.method == 'POST':
+            form = EditVersionForm(request.POST, instance=version)
+            if form.is_valid():
+                # TODO: only allow one package/slug combination
+                # get object, save package
+                form.save()
+                # TODO: check version slug
+                return redirect('nirvana.pkg.views.version', slug=package.slug, version_slug=version.slug)
+        else:
+            form = EditVersionForm(instance=version)
+        # if it's invalid or initial, display it.
+        return render_to_response(
+                'pkg/version_edit.html',
                 {
                     'form': form,
                 },
@@ -212,5 +268,6 @@ def api_version(request, slug, version_slug):
             'package': version.package.slug,
             'usefile': urlresolvers.reverse('nirvana.pkg.views.usefile',
                 kwargs={'slug': slug, 'version_slug': version_slug, 'usefile': slug},
-            )
+            ),
+            'latest_version': package.latest_version.slug,
         }
