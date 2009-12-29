@@ -28,6 +28,7 @@ urlpatterns = patterns('',
     (r'^site_media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': '/home/fred/dev/ooc/nirvana/media'}), # TODO: only for development
 
     # api
+    (r'^api/submit/$', 'nirvana.pkg.views.api_submit'),
     (r'^api/categories/$', 'nirvana.pkg.views.api_categories'),
     (r'^api/category/(?P<slug>[-\w]+)/$', 'nirvana.pkg.views.api_category'),
     (r'^api/packages/(?P<slug>[-\w]+)/$', 'nirvana.pkg.views.api_package'),

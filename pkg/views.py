@@ -2,11 +2,14 @@ from django.http import HttpResponse, Http404
 from django.core import serializers, urlresolvers
 from django.template import RequestContext
 from django.shortcuts import render_to_response, get_object_or_404, redirect
+from django.contrib.auth import login
+from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 
 from nirvana.pkg.models import Category, Package, Version
 from nirvana.pkg.forms import EditPackageForm, NewPackageForm, EditVersionForm, NewVersionForm, NewCategoryForm
 from nirvana.pkg.stuff import json_view, get_api_token
+from nirvana.pkg.usefile import parse_usefile, validate_usefile
 
 def categories(request):
     categories = Category.objects.all()
@@ -281,3 +284,42 @@ def api_version(request, slug, version_slug):
             ),
             'latest_version': package.latest_version.slug,
         }
+
+@json_view
+def api_submit(request):
+    def _get(key):
+        if key in request.POST:
+            return request.POST[key]
+        else:
+            raise Exception('%s not found in the data!' % key)
+    print request.POST
+    usefile = _get('usefile')
+    username = _get('user')
+    slug = _get('slug')
+    api_token = _get('token')
+    make_latest = request.POST.get('make_latest', '') == 'true'
+    version_name = request.POST.get('name', '')
+    # first, see if the api token is correct.
+    user = get_object_or_404(User, username=username)
+    if get_api_token(user) != api_token:
+        raise Exception("The api token is incorrect.")
+    # get & validate.
+    dct = parse_usefile(usefile)
+    validate_usefile(dct)
+    # do we have such a package?
+    package = get_object_or_404(Package, slug=slug)
+    if user != package.author:
+        raise Exception("You are not allowed to add a version to this package.")
+    # yeah, we have. create a new version.
+    version = Version(slug=dct['Version'],
+                      name=version_name,
+                      package=package,
+                      usefile=usefile,
+                      )
+    version.save()
+    if make_latest:
+        package.latest_version = version
+        package.save()
+    return {'url': urlresolvers.reverse('nirvana.pkg.views.version', kwargs={'slug': package.slug, 'version_slug': dct['Version']})}
+        
+
