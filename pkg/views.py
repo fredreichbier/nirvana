@@ -166,7 +166,8 @@ def version_new(request, slug):
         if request.method == 'POST':
             form = NewVersionForm(request.POST)
             if form.is_valid():
-                # TODO: only allow one package/slug combination
+                if Version.objects.filter(slug=form.cleaned_data['slug'], package=package):
+                    raise Http404("A version like this already exists.") # TODO: nicer error.
                 # get object, save package
                 version = form.save(commit=False)
                 version.package = package
@@ -202,7 +203,8 @@ def version_edit(request, slug, version_slug):
         if request.method == 'POST':
             form = EditVersionForm(request.POST, instance=version)
             if form.is_valid():
-                # TODO: only allow one package/slug combination
+                if Version.objects.filter(slug=form.cleaned_data['slug'], package=package):
+                    raise Http404("A version like this already exists.") # TODO: nicer error.                
                 # get object, save package
                 form.save()
                 # TODO: check version slug
@@ -292,7 +294,6 @@ def api_submit(request):
             return request.POST[key]
         else:
             raise Exception('%s not found in the data!' % key)
-    print request.POST
     usefile = _get('usefile')
     username = _get('user')
     slug = _get('slug')
@@ -310,6 +311,8 @@ def api_submit(request):
     package = get_object_or_404(Package, slug=slug)
     if user != package.author:
         raise Exception("You are not allowed to add a version to this package.")
+    if Version.objects.get(slug=dct['Version'], package=package) is not None:
+        raise Exception("A version like this already exists.")
     # yeah, we have. create a new version.
     version = Version(slug=dct['Version'],
                       name=version_name,
