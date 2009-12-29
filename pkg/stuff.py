@@ -1,5 +1,6 @@
 import sys
 import re
+import hashlib
 
 from django.http import HttpResponse
 from django.utils import simplejson
@@ -61,3 +62,13 @@ def json_view(func):
         json = simplejson.dumps(response)
         return HttpResponse(json, mimetype='text/plain') # TODO: i guess that should be application/json
     return wrap
+
+def get_api_token(user):
+    """
+        Calculate the API token of *user*.
+    """
+    md5 = hashlib.md5()
+    md5.update(user.username)
+    md5.update(':')
+    md5.update(user.password)
+    return md5.hexdigest()

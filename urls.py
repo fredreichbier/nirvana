@@ -8,6 +8,7 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     (r'^$', 'nirvana.pkg.views.categories'),
     (r'^admin/', include(admin.site.urls)),
+    (r'^token/', 'nirvana.pkg.views.api_token'),
     (r'^categories/$', 'nirvana.pkg.views.categories'),
     (r'^category/new/$', 'nirvana.pkg.views.category_new'),
     (r'^category/(?P<slug>[-\w]+)/$', 'nirvana.pkg.views.category'),

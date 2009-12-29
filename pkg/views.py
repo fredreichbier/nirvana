@@ -6,7 +6,7 @@ from django.contrib.auth.decorators import login_required
 
 from nirvana.pkg.models import Category, Package, Version
 from nirvana.pkg.forms import EditPackageForm, NewPackageForm, EditVersionForm, NewVersionForm, NewCategoryForm
-from nirvana.pkg.stuff import json_view
+from nirvana.pkg.stuff import json_view, get_api_token
 
 def categories(request):
     categories = Category.objects.all()
@@ -62,6 +62,16 @@ def version(request, slug, version_slug):
                 'package': package,
                 'version': version,
                 'versions': Version.objects.filter(package=package),
+            },
+            context_instance=RequestContext(request),
+            )
+
+@login_required
+def api_token(request):
+    return render_to_response(
+            'pkg/api_token.html',
+            {
+                'api_token': get_api_token(request.user),
             },
             context_instance=RequestContext(request),
             )
