@@ -311,7 +311,7 @@ def api_submit(request):
     package = get_object_or_404(Package, slug=slug)
     if user != package.author:
         raise Exception("You are not allowed to add a version to this package.")
-    if Version.objects.get(slug=dct['Version'], package=package) is not None:
+    if Version.objects.filter(slug=dct['Version'], package=package):
         raise Exception("A version like this already exists.")
     # yeah, we have. create a new version.
     version = Version(slug=dct['Version'],
