@@ -203,8 +203,8 @@ def version_edit(request, slug, version_slug):
         if request.method == 'POST':
             form = EditVersionForm(request.POST, instance=version)
             if form.is_valid():
-                if Version.objects.filter(slug=form.cleaned_data['slug'], package=package):
-                    raise Http404("A version like this already exists.") # TODO: nicer error.                
+                if (version.slug != form.cleaned_data['slug'] and Version.objects.filter(slug=form.cleaned_data['slug'], package=package)):
+                    raise Http404("A version like this already exists.") # TODO: nicer error.
                 # get object, save package
                 form.save()
                 # TODO: check version slug
