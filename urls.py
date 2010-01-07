@@ -36,6 +36,12 @@ urlpatterns = patterns('',
 
     (r'^packages/(?P<slug>[-\w]+)/latest/(?P<variant_slug>[-\w]+)/(?P<usefile>[-\w.]+)\.use$', 'nirvana.pkg.views.usefile', {'version_slug': None}),
     (r'^packages/(?P<slug>[-\w]+)/(?P<version_slug>[-\w.]+)/(?P<variant_slug>[-\w.]+)/(?P<usefile>[-\w.]+)\.use$', 'nirvana.pkg.views.usefile'), # TODO: fix the version regex
+    (r'^packages/(?P<slug>[-\w]+)/latest/(?P<variant_slug>[-\w]+)/(?P<checksums>[-\w.]+)\.checksums$', 'nirvana.pkg.views.checksums', {'version_slug': None}),
+    (r'^packages/(?P<slug>[-\w]+)/(?P<version_slug>[-\w.]+)/(?P<variant_slug>[-\w.]+)/(?P<checksums>[-\w.]+)\.checksums$', 'nirvana.pkg.views.checksums'), # TODO: fix the version regex
+    (r'^packages/(?P<slug>[-\w]+)/latest/(?P<variant_slug>[-\w]+)/(?P<checksums_signature>[-\w.]+)\.checksums\.sig$', 'nirvana.pkg.views.checksums_signature', {'version_slug': None}),
+    (r'^packages/(?P<slug>[-\w]+)/(?P<version_slug>[-\w.]+)/(?P<variant_slug>[-\w.]+)/(?P<checksums_signature>[-\w.]+)\.checksums\.sig$', 'nirvana.pkg.views.checksums_signature'), # TODO: fix the version regex
+
+
 
     (r'^accounts/', include('registration.backends.default.urls')),
 

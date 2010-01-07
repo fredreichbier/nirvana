@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
-<p><a href="{% url nirvana.pkg.views.usefile slug=package.slug version_slug=version.slug variant_slug=variant.slug usefile=package.slug %}">get usefile</a></p>
+<p><a href="{% url nirvana.pkg.views.usefile slug=package.slug version_slug=version.slug variant_slug=variant.slug usefile=package.slug %}">get usefile</a><br/>
+<a href="{% url nirvana.pkg.views.checksums slug=package.slug version_slug=version.slug variant_slug=variant.slug checksums=package.slug %}">get checksums</a><br/>
+<a href="{% url nirvana.pkg.views.checksums_signature slug=package.slug version_slug=version.slug variant_slug=variant.slug checksums_signature=package.slug %}">get checksums signature</a></p>
 {{ block.super }}
 {% endblock %}

@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-from nirvana.pkg.stuff import DBVersionSlugField
+from nirvana.pkg.stuff import DBVersionSlugField, sign
 
 class Package(models.Model):
     slug = models.SlugField(primary_key=True, max_length=50)
@@ -68,6 +68,10 @@ class Variant(models.Model):
 
     def __unicode__(self):
         return '%s %s' % (self.slug, self.name)
+
+    def set_signature(self):
+        if self.checksums:
+            self.checksums_signature = sign(self.checksums)
 
 class Category(models.Model):
     slug = models.SlugField(primary_key=True, max_length=50)

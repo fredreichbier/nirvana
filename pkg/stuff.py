@@ -1,7 +1,9 @@
 import sys
 import re
 import hashlib
+from subprocess import PIPE, Popen
 
+from django.conf import settings
 from django.http import HttpResponse
 from django.utils import simplejson
 from django.core.mail import mail_admins
@@ -72,3 +74,16 @@ def get_api_token(user):
     md5.update(':')
     md5.update(user.password)
     return md5.hexdigest()
+
+
+def sign(checksum):
+    proc = Popen(
+        ['/usr/bin/gpg',
+            '-b',
+            '-u', settings.GPG_KEY,
+            '--passphrase', settings.GPG_PASSPHRASE,
+            '--armor',
+            '-'],
+        stdin=PIPE, stdout=PIPE, stderr=PIPE)
+    return proc.communicate(checksum)[0]
+

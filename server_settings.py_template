@@ -29,3 +29,7 @@ EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = ''
 
 ACCOUNT_ACTIVATION_DAYS = 7
+
+# settings for gpg. gpg is used for checksum signatures.
+GPG_KEY = ''
+GPG_PASSPHRASE = ''
