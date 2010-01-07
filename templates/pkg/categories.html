@@ -1,9 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
     <ul>
-    {% if user.is_authenticated %}
-    <li><a href="{% url nirvana.pkg.views.category slug="my" %}">my packages</a></li>
-    {% endif %}
     {% for category in categories %}
         <li><a href="{% url nirvana.pkg.views.category slug=category.slug %}">{{ category.name }}</a></li>
     {% empty %}

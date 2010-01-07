@@ -441,5 +441,3 @@ def api_submit(request):
         package.latest_version = version
         package.save()
     return {'url': urlresolvers.reverse('nirvana.pkg.views.version', kwargs={'slug': package.slug, 'version_slug': dct['Version']})}
-        
-
