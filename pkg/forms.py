@@ -1,5 +1,6 @@
-from django.forms import ModelForm, BooleanField, ChoiceField
-from nirvana.pkg.models import Package, Version, Category
+from django.forms import ModelForm, BooleanField, ChoiceField, ValidationError
+from django.forms.models import modelformset_factory
+from nirvana.pkg.models import Package, Version, Category, Variant, ManagerPermission
 
 class NewPackageForm(ModelForm):
     class Meta:
@@ -9,12 +10,7 @@ class NewPackageForm(ModelForm):
 class EditPackageForm(ModelForm):
     class Meta:
         model = Package
-        fields = ('name', 'homepage', 'category', 'latest_version') # Sorry man, can't change the slug.
-
-    def __init__(self, *args, **kwargs):
-       super(EditPackageForm, self).__init__(*args, **kwargs)
-       # only display "my versions".
-       self.fields['latest_version'].queryset = Version.objects.filter(package=self.instance)
+        fields = ('name', 'homepage', 'category') # Sorry man, can't change the slug.
 
 class NewCategoryForm(ModelForm):
     class Meta:
@@ -22,15 +18,22 @@ class NewCategoryForm(ModelForm):
         fields = ('slug', 'name')
 
 class NewVersionForm(ModelForm):
-    make_latest = BooleanField(label='Make latest version', initial=True, required=False)
-
     class Meta:
         model = Version
-        fields = ('slug', 'name', 'usefile')
-        
-class EditVersionForm(ModelForm):
-    class Meta:
-        model = Version
-        fields = ('slug', 'name', 'usefile')
-        
+        fields = ('slug', 'name', 'latest')
 
+EditVersionForm = NewVersionForm
+
+class NewVariantForm(ModelForm):
+    class Meta:
+        model = Variant
+        fields = ('slug', 'name', 'usefile', 'checksums')
+
+    def clean_slug(self):
+        if not self.package.is_authorized_for_variant(self.request.user, self.cleaned_data['slug']):
+            raise ValidationError('You are not authorized to edit / create this variant.')
+        return self.cleaned_data['slug']
+
+EditVariantForm = NewVariantForm
+
+ManagerPermissionFormSet = modelformset_factory(ManagerPermission, exclude=('package',), can_delete=True)

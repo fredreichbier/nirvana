@@ -13,15 +13,29 @@ urlpatterns = patterns('',
     (r'^category/new/$', 'nirvana.pkg.views.category_new'),
     (r'^category/(?P<slug>[-\w]+)/$', 'nirvana.pkg.views.category'),
     (r'^package/new/$', 'nirvana.pkg.views.package_new'),
+    (r'^package/(?P<slug>[-\w]+)/latest/new/$', 'nirvana.pkg.views.variant_new', {'version_slug': None}),
+    (r'^package/(?P<slug>[-\w]+)/(?P<version_slug>[-\w.]+)/new/$', 'nirvana.pkg.views.variant_new'), # TODO: fix the version regex
+
+    (r'^package/(?P<slug>[-\w]+)/latest/(?P<variant_slug>[-\w]+)/edit/$', 'nirvana.pkg.views.variant_edit', {'version_slug': None}),
+    (r'^package/(?P<slug>[-\w]+)/(?P<version_slug>[-\w.]+)/(?P<variant_slug>[-\w.]+)/edit/$', 'nirvana.pkg.views.variant_edit'), # TODO: fix the version regex
+
     (r'^package/(?P<slug>[-\w]+)/new/$', 'nirvana.pkg.views.version_new'),
     (r'^package/(?P<slug>[-\w]+)/edit/$', 'nirvana.pkg.views.package_edit'),
+    (r'^package/(?P<slug>[-\w]+)/managers/$', 'nirvana.pkg.views.package_edit_managers'),
+
     (r'^package/(?P<slug>[-\w]+)/latest/edit/$', 'nirvana.pkg.views.version_edit', {'version_slug': None}),
     (r'^package/(?P<slug>[-\w]+)/(?P<version_slug>[-\w.]+)/edit/$', 'nirvana.pkg.views.version_edit'), # TODO: fix the version regex
+
     (r'^packages/(?P<slug>[-\w]+)/$', 'nirvana.pkg.views.package'),
+
     (r'^packages/(?P<slug>[-\w]+)/latest/$', 'nirvana.pkg.views.version', {'version_slug': None}),
     (r'^packages/(?P<slug>[-\w]+)/(?P<version_slug>[-\w.]+)/$', 'nirvana.pkg.views.version'), # TODO: fix the version regex
-    (r'^packages/(?P<slug>[-\w]+)/latest/(?P<usefile>[-\w]+)\.use$', 'nirvana.pkg.views.usefile', {'version_slug': None}),
-    (r'^packages/(?P<slug>[-\w]+)/(?P<version_slug>[-\w.]+)/(?P<usefile>[-\w]+)\.use$', 'nirvana.pkg.views.usefile'), # TODO: fix the version regex
+
+    (r'^packages/(?P<slug>[-\w]+)/latest/(?P<variant_slug>[-\w]+)/$', 'nirvana.pkg.views.variant', {'version_slug': None}),
+    (r'^packages/(?P<slug>[-\w]+)/(?P<version_slug>[-\w.]+)/(?P<variant_slug>[-\w.]+)/$', 'nirvana.pkg.views.variant'), # TODO: fix the version regex
+
+    (r'^packages/(?P<slug>[-\w]+)/latest/(?P<variant_slug>[-\w]+)/(?P<usefile>[-\w.]+)\.use$', 'nirvana.pkg.views.usefile', {'version_slug': None}),
+    (r'^packages/(?P<slug>[-\w]+)/(?P<version_slug>[-\w.]+)/(?P<variant_slug>[-\w.]+)/(?P<usefile>[-\w.]+)\.use$', 'nirvana.pkg.views.usefile'), # TODO: fix the version regex
 
     (r'^accounts/', include('registration.backends.default.urls')),
 

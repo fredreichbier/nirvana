@@ -3,18 +3,18 @@
     <h2>{{ package.name }}</h2>
     {% if user.is_authenticated %}
     {% ifequal user package.author %}
-    <a href="{% url nirvana.pkg.views.package_edit slug=package.slug %}">edit</a> - <a href="{% url nirvana.pkg.views.version_new slug=package.slug %}">upload new version</a>
+    <a href="{% url nirvana.pkg.views.package_edit slug=package.slug %}">edit</a> - <a href="{% url nirvana.pkg.views.package_edit_managers slug=package.slug %}">managers</a> - <a href="{% url nirvana.pkg.views.version_new slug=package.slug %}">upload new version</a>
     {% endifequal %}
     {% endif %}
     <ul>
     {% for version in versions %}
-        {% ifequal version package.latest_version %}
+        {% if version.latest %}
             <b>
-        {% endifequal %}
+        {% endif %}
             <li><a href="{% url nirvana.pkg.views.version slug=package.slug version_slug=version.slug %}">{{ version.slug }} {{ package.latest_version.name }}</a>{% if user.is_authenticated %}{% ifequal user package.author %}<a href="{% url nirvana.pkg.views.version_edit slug=package.slug version_slug=version.slug %}">- edit</a>{% endifequal %}{% endif %}</li>
-        {% ifequal version package.latest_version %}
+        {% if version.latest %}
             </b>
-        {% endifequal %}
+        {% endif %}
     {% empty %}
     No versions.
     {% endfor %}

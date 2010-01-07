@@ -1,8 +1,6 @@
 {% extends "base.html" %}
-
 {% block content %}
-
-<form method="post" action="">
+<form action="" method="post">
     <div class="fieldWrapper">
         {{ form.slug.errors }}
         <label for="id_slug">Slug:</label>
@@ -14,12 +12,14 @@
         {{ form.name }}
     </div>
     <div class="fieldWrapper">
-        {{ form.latest.errors }}
-        <label for="id_latest">Latest version:</label>
-        {{ form.latest }}
+        {{ form.usefile.errors }}
+        <label for="id_usefile">Usefile:</label>
+        {{ form.usefile }}
     </div>
-    <input type="submit" value="edit" />
-</form>
-
+    <div class="fieldWrapper">
+        {{ form.checksums.errors }}
+        <label for="id_checksum">Checksums:</label>
+        {{ form.checksums }}
+    </div>
+    <input type="submit" value="new" /></form>
 {% endblock %}
-

@@ -1,5 +1,21 @@
 {% extends "pkg/package.html" %}
 {% block content %}
-You have selected {{ package.name }} {{ version }}: <a href="{% url nirvana.pkg.views.usefile slug=package.slug version_slug=version.slug usefile=package.slug %}">click</a>
+<p>You have selected {{ package.name }} {{ version }}. Available variants:</p>
+
+<ul>
+    {% for variant_slug, action in variants.items %}
+        <li>
+            <a href="{% url nirvana.pkg.views.variant slug=package.slug version_slug=version.slug variant_slug=variant_slug %}">{{ variant_slug }}</a>
+{% ifequal action "edit" %}
+- <a href="{% url nirvana.pkg.views.variant_edit slug=package.slug version_slug=version.slug variant_slug=variant_slug %}">edit</a>
+{% endifequal %}
+        </li>
+    {% empty %}
+    None.
+    {% endfor %}
+    {% if user.is_authenticated %}
+    <li><a href="{% url nirvana.pkg.views.variant_new slug=package.slug version_slug=version.slug %}">new variant</a></li>
+    {% endif %}
+</ul>
 {{ block.super }}
 {% endblock %}

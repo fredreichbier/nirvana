@@ -1,0 +1,5 @@
+{% extends "base.html" %}
+{% block content %}
+<p><a href="{% url nirvana.pkg.views.usefile slug=package.slug version_slug=version.slug variant_slug=variant.slug usefile=package.slug %}">get usefile</a></p>
+{{ block.super }}
+{% endblock %}

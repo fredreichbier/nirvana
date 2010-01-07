@@ -21,16 +21,9 @@
         Example: <em>Hardy Heron</em></p>
     </div>
     <div class="fieldWrapper">
-        {{ form.usefile.errors }}
-        <label for="id_usefile">Usefile:</label>
-        {{ form.usefile }}
-        <p>The contents of the usefile of the version. Make sure there is an <em>Origin</em> value given,
-        otherwise people won't be able to use this nirvana record to install the package.</p>
-    </div>
-    <div class="fieldWrapper">
-        {{ form.make_latest.errors }}
-        <label for="id_make_latest">Make latest version:</label>
-        {{ form.make_latest }}
+        {{ form.latest.errors }}
+        <label for="id_latest">Latest version:</label>
+        {{ form.latest }}
         <p>Activate if you want to have this as the latest (= default) version.</p>
     </div>
     <input type="submit" value="new" />

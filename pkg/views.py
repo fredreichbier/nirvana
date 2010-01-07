@@ -6,8 +6,8 @@ from django.contrib.auth import login
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 
-from nirvana.pkg.models import Category, Package, Version
-from nirvana.pkg.forms import EditPackageForm, NewPackageForm, EditVersionForm, NewVersionForm, NewCategoryForm
+from nirvana.pkg.models import Category, Package, Version, Variant, ManagerPermission
+from nirvana.pkg.forms import EditPackageForm, NewPackageForm, EditVersionForm, NewVersionForm, NewCategoryForm, NewVariantForm, EditVariantForm, ManagerPermissionFormSet
 from nirvana.pkg.stuff import json_view, get_api_token
 from nirvana.pkg.usefile import parse_usefile, validate_usefile
 
@@ -59,15 +59,39 @@ def version(request, slug, version_slug):
         version = package.latest_version
     else:
         version = get_object_or_404(Version, package=package, slug=version_slug)
+    variants = Variant.objects.filter(version=version)
+    authorized_variants = package.get_authorized_variants(request.user)
+    variants_dict = dict((variant.slug, False) for variant in variants)
+    for variant_slug in authorized_variants:
+        variants_dict[variant_slug] = 'edit'
     return render_to_response(
             'pkg/version.html',
             {
                 'package': package,
                 'version': version,
                 'versions': Version.objects.filter(package=package),
+                'variants': variants_dict,
+                'authorized': request.user.is_authenticated(),
             },
             context_instance=RequestContext(request),
             )
+
+def variant(request, slug, version_slug, variant_slug):
+    package = get_object_or_404(Package, slug=slug)
+    if version_slug is None: # display latest version
+        version = package.latest_version
+    else:
+        version = get_object_or_404(Version, package=package, slug=version_slug)
+    variant = get_object_or_404(Variant, version=version, slug=variant_slug)
+    return render_to_response(
+            'pkg/variant.html',
+            {
+                'package': package,
+                'version': version,
+                'variant': variant,
+                'usefile': package.slug,
+            },
+            context_instance=RequestContext(request))
 
 @login_required
 def api_token(request):
@@ -79,22 +103,23 @@ def api_token(request):
             context_instance=RequestContext(request),
             )
 
-def usefile(request, slug, version_slug, usefile):
+def usefile(request, slug, version_slug, variant_slug, usefile):
     package = get_object_or_404(Package, slug=slug)
     if version_slug is None: # display latest version
         version = package.latest_version
     else:
         version = get_object_or_404(Version, package=package, slug=version_slug)
+    variant = get_object_or_404(Variant, version=version, slug=variant_slug)
     if usefile != package.slug:
         raise Http404()
-    return HttpResponse(version.usefile, mimetype='text/plain')
+    return HttpResponse(variant.usefile, mimetype='text/plain')
 
 @login_required
 def package_new(request):
     if request.method == 'POST':
         form = NewPackageForm(request.POST)
         if form.is_valid():
-            # uuuhuhu get an object ... 
+            # uuuhuhu get an object ...
             package = form.save(commit=False)
             # ... but set the author ...
             package.author = request.user
@@ -157,6 +182,35 @@ def package_edit(request, slug):
                 )
 
 @login_required
+def package_edit_managers(request, slug):
+    package = get_object_or_404(Package, slug=slug)
+    if request.user != package.author:
+        # oh oh! hacker! let's confuse him with a 404.
+        raise Http404()
+    else:
+        if request.method == 'POST':
+            formset = ManagerPermissionFormSet(request.POST, queryset=ManagerPermission.objects.filter(package=package))
+            if formset.is_valid():
+                # get object, save package
+                for instance in formset.save(commit=False):
+                    instance.package = package
+                    instance.save()
+                # TODO: check version slug
+                return redirect('nirvana.pkg.views.package', slug=package.slug)
+        else:
+            formset = ManagerPermissionFormSet(queryset=ManagerPermission.objects.filter(package=package))
+        # if it's invalid or initial, display it.
+        return render_to_response(
+                'pkg/package_edit_managers.html',
+                {
+                    'formset': formset,
+                },
+                context_instance=RequestContext(request),
+                )
+
+
+
+@login_required
 def version_new(request, slug):
     package = get_object_or_404(Package, slug=slug)
     if request.user != package.author:
@@ -171,11 +225,9 @@ def version_new(request, slug):
                 # get object, save package
                 version = form.save(commit=False)
                 version.package = package
+                if version.latest:
+                    version.make_latest()
                 version.save()
-                # should it be the new latest version?
-                if form.cleaned_data['make_latest']:
-                    package.latest_version = version
-                    package.save()
                 # TODO: check version slug
                 return redirect('nirvana.pkg.views.version', slug=package.slug, version_slug=version.slug)
         else:
@@ -205,8 +257,10 @@ def version_edit(request, slug, version_slug):
             if form.is_valid():
                 if (version.slug != form.cleaned_data['slug'] and Version.objects.filter(slug=form.cleaned_data['slug'], package=package)):
                     raise Http404("A version like this already exists.") # TODO: nicer error.
-                # get object, save package
-                form.save()
+                version = form.save(commit=False)
+                if version.latest:
+                    version.make_latest()
+                version.save()
                 # TODO: check version slug
                 return redirect('nirvana.pkg.views.version', slug=package.slug, version_slug=version.slug)
         else:
@@ -219,6 +273,69 @@ def version_edit(request, slug, version_slug):
                 },
                 context_instance=RequestContext(request),
                 )
+
+@login_required
+def variant_new(request, slug, version_slug):
+    package = get_object_or_404(Package, slug=slug)
+    version = get_object_or_404(Version, slug=version_slug, package=package)
+    if request.method == 'POST':
+        form = NewVariantForm(request.POST)
+        # required for validation!
+        form.package = package
+        form.request = request
+        if form.is_valid():
+            if Variant.objects.filter(slug=form.cleaned_data['slug'], version=version):
+                raise Http404("A variant like this already exists.") # TODO: nicer error.
+            # get object, save package
+            variant = form.save(commit=False)
+            variant.version = version
+            variant.save()
+            # TODO: check usefile.
+            # TODO: check version slug
+            return redirect('nirvana.pkg.views.variant',
+                    slug=package.slug, version_slug=version.slug, variant_slug=variant.slug)
+    else:
+        form = NewVariantForm()
+    # if it's invalid or initial, display it.
+    return render_to_response(
+            'pkg/variant_new.html',
+            {
+                'form': form,
+            },
+            context_instance=RequestContext(request),
+            )
+
+@login_required
+def variant_edit(request, slug, version_slug, variant_slug):
+    package = get_object_or_404(Package, slug=slug)
+    version = get_object_or_404(Version, slug=version_slug, package=package)
+    variant = get_object_or_404(Variant, slug=variant_slug, version=version)
+    if not package.is_authorized_for_variant(request.user, variant.slug):
+        raise Http404('You are not authorized to edit this variant.')
+    if request.method == 'POST':
+        form = EditVariantForm(request.POST, instance=variant)
+        # required for validation!
+        form.package = package
+        form.request = request
+        if form.is_valid():
+            # get object, save package
+            variant = form.save(commit=False)
+            variant.version = version
+            variant.save()
+            # TODO: check usefile.
+            # TODO: check version slug
+            return redirect('nirvana.pkg.views.variant',
+                    slug=package.slug, version_slug=version.slug, variant_slug=variant.slug)
+    else:
+        form = EditVariantForm(instance=variant)
+    # if it's invalid or initial, display it.
+    return render_to_response(
+            'pkg/variant_edit.html',
+            {
+                'form': form,
+            },
+            context_instance=RequestContext(request),
+            )
 
 def _get_type(request, choices):
     t = request.GET.get('type', choices[0])
