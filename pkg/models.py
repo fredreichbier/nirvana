@@ -72,6 +72,8 @@ class Variant(models.Model):
     def set_signature(self):
         if self.checksums:
             self.checksums_signature = sign(self.checksums)
+        else:
+            self.checksums_signature = ''
 
 class Category(models.Model):
     slug = models.SlugField(primary_key=True, max_length=50)
