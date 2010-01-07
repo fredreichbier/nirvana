@@ -10,6 +10,14 @@ class Package(models.Model):
     homepage = models.URLField(null=True, blank=True)
     category = models.ForeignKey('Category')
 
+    @property
+    def latest_version(self):
+        objects = Version.objects.filter(package=self, latest=True)
+        if objects:
+            return objects[0]
+        else:
+            return None
+
     def __unicode__(self):
         return self.name
 

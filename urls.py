@@ -54,4 +54,6 @@ urlpatterns = patterns('',
     (r'^api/packages/(?P<slug>[-\w]+)/$', 'nirvana.pkg.views.api_package'),
     (r'^api/packages/(?P<slug>[-\w]+)/latest/$', 'nirvana.pkg.views.api_version', {'version_slug': None}),
     (r'^api/packages/(?P<slug>[-\w]+)/(?P<version_slug>[-\w.]+)/$', 'nirvana.pkg.views.api_version'),
+    (r'^api/packages/(?P<slug>[-\w]+)/latest/(?P<variant_slug>[-\w.]+)/$', 'nirvana.pkg.views.api_variant', {'version_slug': None}),
+    (r'^api/packages/(?P<slug>[-\w]+)/(?P<version_slug>[-\w.]+)/(?P<variant_slug>[-\w.]+)/$', 'nirvana.pkg.views.api_variant'),
 )

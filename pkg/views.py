@@ -386,6 +386,9 @@ def api_category(request, slug):
 def api_package(request, slug):
     package = get_object_or_404(Package, slug=slug)
     versions = Version.objects.filter(package=package)
+    latest_version = package.latest_version
+    if latest_version is not None:
+        latest_version = latest_version.slug
     type = _get_type(request, ('contents', 'details'))
     if type == 'contents':
         return dict((v.slug, v.name) for v in versions)
@@ -395,7 +398,7 @@ def api_package(request, slug):
                 'name': package.name,
                 'author': package.author.username,
                 'homepage': package.homepage,
-                'latest_version': package.latest_version.slug,
+                'latest_version': latest_version,
                 'category': package.category.slug,
                 'versions': [v.slug for v in versions]
         }
@@ -408,14 +411,37 @@ def api_version(request, slug, version_slug):
         version_slug = 'latest'
     else:
         version = get_object_or_404(Version, package=package, slug=version_slug)
+    variants = Variant.objects.filter(version=version)
     return {
             'slug': version.slug,
             'name': version.name,
             'package': version.package.slug,
+            'latest': version.latest,
+            'variants': [v.slug for v in variants]
+        }
+
+@json_view
+def api_variant(request, slug, version_slug, variant_slug):
+    package = get_object_or_404(Package, slug=slug)
+    if version_slug is None:
+        version = package.latest_version
+        version_slug = 'latest'
+    else:
+        version = get_object_or_404(Version, package=package, slug=version_slug)
+    variant = get_object_or_404(Variant, version=version, slug=variant_slug)
+    return {
+            'slug': variant.slug,
+            'name': variant.name,
+            'version': variant.version.slug,
             'usefile': urlresolvers.reverse('nirvana.pkg.views.usefile',
-                kwargs={'slug': slug, 'version_slug': version_slug, 'usefile': slug},
+                kwargs={'slug': slug, 'version_slug': version_slug, 'variant_slug': variant.slug, 'usefile': slug},
             ),
-            'latest_version': package.latest_version.slug,
+            'checksums': urlresolvers.reverse('nirvana.pkg.views.checksums',
+                kwargs={'slug': slug, 'version_slug': version_slug, 'variant_slug': variant.slug, 'checksums': slug},
+            ),
+            'checksums_signature': urlresolvers.reverse('nirvana.pkg.views.checksums_signature',
+                kwargs={'slug': slug, 'version_slug': version_slug, 'variant_slug': variant.slug, 'checksums_signature': slug},
+            ),
         }
 
 @json_view
