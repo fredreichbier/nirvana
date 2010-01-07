@@ -412,13 +412,17 @@ def api_version(request, slug, version_slug):
     else:
         version = get_object_or_404(Version, package=package, slug=version_slug)
     variants = Variant.objects.filter(version=version)
-    return {
-            'slug': version.slug,
-            'name': version.name,
-            'package': version.package.slug,
-            'latest': version.latest,
-            'variants': [v.slug for v in variants]
-        }
+    type = _get_type(request, ('contents', 'details'))
+    if type == 'contents':
+        return dict((v.slug, v.name) for v in variants)
+    else:
+        return {
+                'slug': version.slug,
+                'name': version.name,
+                'package': version.package.slug,
+                'latest': version.latest,
+                'variants': [v.slug for v in variants]
+            }
 
 @json_view
 def api_variant(request, slug, version_slug, variant_slug):
