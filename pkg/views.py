@@ -450,39 +450,41 @@ def api_variant(request, slug, version_slug, variant_slug):
 
 @json_view
 def api_submit(request):
-    raise Exception('Not yet implemented.')
-#    def _get(key):
-#        if key in request.POST:
-#            return request.POST[key]
-#        else:
-#            raise Exception('%s not found in the data!' % key)
-#    usefile = _get('usefile')
-#    username = _get('user')
-#    slug = _get('slug')
-#    api_token = _get('token')
-#    make_latest = request.POST.get('make_latest', '') == 'true'
-#    version_name = request.POST.get('name', '')
-#    # first, see if the api token is correct.
-#    user = get_object_or_404(User, username=username)
-#    if get_api_token(user) != api_token:
-#        raise Exception("The api token is incorrect.")
-#    # get & validate.
-#    dct = parse_usefile(usefile)
-#    validate_usefile(dct)
-#    # do we have such a package?
-#    package = get_object_or_404(Package, slug=slug)
-#    if user != package.author:
-#        raise Exception("You are not allowed to add a version to this package.")
-#    if Version.objects.filter(slug=dct['Version'], package=package):
-#        raise Exception("A version like this already exists.")
-#    # yeah, we have. create a new version.
-#    version = Version(slug=dct['Version'],
-#                      name=version_name,
-#                      package=package,
-#                      usefile=usefile,
-#                      )
-#    version.save()
-#    if make_latest:
-#        package.latest_version = version
-#        package.save()
-#    return {'url': urlresolvers.reverse('nirvana.pkg.views.version', kwargs={'slug': package.slug, 'version_slug': dct['Version']})}
+    def _get(key):
+        if key in request.POST:
+            return request.POST[key]
+        else:
+            raise Exception('%s not found in the data!' % key)
+    usefile = _get('usefile')
+    username = _get('user')
+    slug = _get('slug')
+    api_token = _get('token')
+    checksums = _get('checksums')
+    variant_name = request.POST.get('name', '')
+    # first, see if the api token is correct.
+    user = get_object_or_404(User, username=username)
+    if get_api_token(user) != api_token:
+        raise Exception("The api token is incorrect.")
+    # get & validate.
+    dct = parse_usefile(usefile)
+    validate_usefile(dct)
+    # do we have such a package and such a version?
+    package = get_object_or_404(Package, slug=slug)
+    version = get_object_or_404(Version, package=package, slug=dct['Version'])
+    if not package.is_authorized_for_variant(user, dct['Variant']):
+        raise Exception("You are not allowed to add this variant to this package.")
+    if Variant.objects.filter(slug=dct['Variant'], version=version):
+        raise Exception("A variant like this already exists.")
+    # yeah, we have. create a new version.
+    variant = Variant(
+                    slug=dct['Variant'],
+                    name=variant_name,
+                    version=version,
+                    usefile=usefile,
+                    checksums=checksums
+                    )
+    variant.set_signature()
+    variant.save()
+    return {'path':
+        urlresolvers.reverse('nirvana.pkg.views.variant',
+            kwargs={'slug': package.slug, 'version_slug': dct['Version'], 'variant_slug': dct['Variant']})}

@@ -20,8 +20,8 @@ def validate_usefile(dct):
         Raise `InvalidUsefile` if there's something wrong with the dictionary *dct*.
 
         Requirements:
-            - should have "Name", "Version" and "Origin" fields.
+            - should have "Name", "Version", "Variant" and "Origin" fields.
     """
-    fields = (k in dct for k in ('Name', 'Version', 'Origin'))
+    fields = (k in dct for k in ('Name', 'Version', 'Variant', 'Origin'))
     if not all(fields):
         raise InvalidUsefile("The usefile has to contain 'Name', 'Version' and 'Origin' fields.")
