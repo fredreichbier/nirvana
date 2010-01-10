@@ -81,7 +81,7 @@ class Variant(models.Model):
         if self.checksums:
             if not self.checksums.endswith('\n'):
                 self.checksums += '\n'
-            self.checksums_signature = sign(self.checksums)
+            self.checksums_signature = sign(self.checksums.encode('utf-8'))
         else:
             self.checksums_signature = ''
 
