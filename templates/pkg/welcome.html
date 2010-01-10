@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Welcome!</h2>
+<p>At the ooc nirvana, you can browse package usefiles and even upload your own.</p>
+<p>If you want to download packages from nirvana, make sure you have added the gpg
+public key first:</p>
+<blockquote>
+curl http://nirvana.ooc-lang.org/nirvana.asc > nirvana.asc<br/>
+reincarnate add-key nirvana.asc
+</blockquote>
+<p>
+Please make sure this key is the same as <a href="http://github.com/fredreichbier/nirvana/blob/master/nirvana.asc">here</a>. If it is not, please tell us at #ooc-lang on freenode.
+</p>
+{% endblock %}
