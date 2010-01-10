@@ -19,6 +19,12 @@ def categories(request):
             context_instance=RequestContext(request),
             )
 
+def welcome(request):
+    return render_to_response(
+            'pkg/welcome.html',
+            context_instance=RequestContext(request),
+            )
+
 def category(request, slug):
     if slug == 'my': # special pseudo-category containing my packages
         if request.user.is_authenticated():

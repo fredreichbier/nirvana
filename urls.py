@@ -6,7 +6,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
-    (r'^$', 'nirvana.pkg.views.categories'),
+    (r'^$', 'nirvana.pkg.views.welcome'),
     (r'^admin/', include(admin.site.urls)),
     (r'^token/', 'nirvana.pkg.views.api_token'),
     (r'^categories/$', 'nirvana.pkg.views.categories'),
