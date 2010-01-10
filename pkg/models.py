@@ -78,6 +78,8 @@ class Variant(models.Model):
         return '%s %s' % (self.slug, self.name)
 
     def set_signature(self):
+        if not self.checksums.endswith('\n'):
+            self.checksums += '\n'
         if self.checksums:
             self.checksums_signature = sign(self.checksums)
         else:
