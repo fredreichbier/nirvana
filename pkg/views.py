@@ -465,7 +465,7 @@ def api_submit(request):
     username = _get('user')
     slug = _get('slug')
     api_token = _get('token')
-    checksums = _get('checksums')
+    checksums = request.POST.get('checksums', '')
     variant_name = request.POST.get('name', '')
     # first, see if the api token is correct.
     user = get_object_or_404(User, username=username)
