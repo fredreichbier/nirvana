@@ -24,8 +24,11 @@ class Package(models.Model):
     def get_authorized_variants(self, user):
         variants = []
         if user.is_authenticated():
+            versions = Version.objects.filter(package=self)
+            if user == self.author:
+                return [v.slug for v in Variant.objects.filter(version__in=versions)]
             for permission in self.manager_permissions.filter(user=user):
-                if Variant.objects.filter(slug=permission.variant_slug):
+                if Variant.objects.filter(slug=permission.variant_slug, version__in=versions):
                     variants.append(permission.variant_slug)
         return variants
 
