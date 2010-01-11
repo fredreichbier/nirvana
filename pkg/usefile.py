@@ -24,4 +24,4 @@ def validate_usefile(dct):
     """
     fields = (k in dct for k in ('Name', 'Version', 'Variant', 'Origin'))
     if not all(fields):
-        raise InvalidUsefile("The usefile has to contain 'Name', 'Version' and 'Origin' fields.")
+        raise InvalidUsefile("The usefile has to contain 'Name', 'Version', 'Variant' and 'Origin' fields.")
