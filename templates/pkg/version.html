@@ -13,9 +13,9 @@
     {% empty %}
     None.
     {% endfor %}
-    {% if user.is_authenticated %}
-    <li><a href="{% url nirvana.pkg.views.variant_new slug=package.slug version_slug=version.slug %}">new variant</a></li>
-    {% endif %}
 </ul>
+{% if user.is_authenticated %}
+<p><a href="{% url nirvana.pkg.views.variant_new slug=package.slug version_slug=version.slug %}">create new variant</a></p>
+{% endif %}
 {{ block.super }}
 {% endblock %}
