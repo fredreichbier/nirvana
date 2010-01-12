@@ -79,6 +79,8 @@ def get_api_token(user):
 def sign(checksum):
     proc = Popen(
         ['/usr/bin/gpg',
+            '-q',
+            '--batch',
             '-b',
             '-u', settings.GPG_KEY,
             '--passphrase', settings.GPG_PASSPHRASE,
