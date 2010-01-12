@@ -32,8 +32,8 @@ class Package(models.Model):
                     variants.append(permission.variant_slug)
         return variants
 
-    def is_authorized_for_variant(self, user, variant_slug):
-        if user.is_authenticated():
+    def is_authorized_for_variant(self, user, variant_slug, skip_authentication=False):
+        if (user.is_authenticated() or skip_authentication):
             if user == self.author:
                 return True
             for permission in self.manager_permissions.all():

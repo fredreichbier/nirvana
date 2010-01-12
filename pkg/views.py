@@ -494,3 +494,25 @@ def api_submit(request):
     return {'path':
         urlresolvers.reverse('nirvana.pkg.views.variant',
             kwargs={'slug': package.slug, 'version_slug': dct['Version'], 'variant_slug': dct['Variant']})}
+
+@json_view
+def api_authorized(request):
+    def _get(key):
+        if key in request.POST:
+            return request.POST[key]
+        else:
+            raise Exception('%s not found in the data!' % key)
+
+    username = _get('user')
+    api_token = _get('token')
+    package_slug = _get('package')
+    version_slug = _get('version')
+    variant_slug = _get('variant')
+
+    user = get_object_or_404(User, username=username)
+    if get_api_token(user) != api_token:
+        raise Exception("The api token is incorrect.")
+
+    package = get_object_or_404(Package, slug=package_slug)
+    version = get_object_or_404(Version, package=package, slug=version_slug)
+    return {'authorized': package.is_authorized_for_variant(user, variant_slug, True)}
