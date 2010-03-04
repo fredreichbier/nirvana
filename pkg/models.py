@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models import Q
 from django.contrib.auth.models import User
 
 from nirvana.pkg.stuff import DBVersionSlugField, sign
@@ -40,6 +41,18 @@ class Package(models.Model):
                 if (permission.user == user and permission.variant_slug == variant_slug):
                     return True
         return False
+
+    @classmethod
+    def search(cls, text):
+        q = None
+        for field in ('name', 'slug', 'author__username'):
+            kwargs = {'%s__icontains' % field: text}
+            current = Q(**kwargs)
+            if q is None:
+                q = current
+            else:
+                q = q | current
+        return cls.objects.filter(q)
 
 class ManagerPermission(models.Model):
     user = models.ForeignKey(User)

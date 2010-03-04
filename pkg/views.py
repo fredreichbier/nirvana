@@ -366,6 +366,14 @@ def _get_type(request, choices):
 # API
 
 @json_view
+def api_search(request):
+    pattern = request.GET['pattern']
+    if not pattern.strip():
+        raise Exception('No pattern given >:o')
+    packages = Package.search(pattern)
+    return dict((p.slug, p.name) for p in packages)
+
+@json_view
 def api_categories(request):
     type = _get_type(request, ('contents', 'details'))
     if type == 'contents':
