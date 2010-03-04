@@ -231,6 +231,25 @@ Return a JSON object containing this value:
 
 ``authorized``: a boolean value determining if the user is authorized to manage this variant.
 
+/search/
+~~~~~~~~
+
+**Format**::
+
+    /search/?pattern=...
+
+Use this request to search for packages. Pass a simple (non-regex) pattern as a parameter, nirvana will search its
+database and return all packages that contain parts of your pattern in their names, slugs and author's user names.
+
+A JSON object mapping package slugs to package names is returned.
+
+Example::
+
+    % curl 'http://nirvana.ooc-lang.org/api/search/?pattern=hel'
+    {"__result": "ok", "helloworld": "Hello World!"}
+    % curl 'http://nirvana.ooc-lang.org/api/search/?pattern=ndd'
+    {"greg": "greg recursive descent parser generator", "__result": "ok"}
+
 Questions?
 ----------
 

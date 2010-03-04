@@ -49,12 +49,12 @@ endobj
 % 'Page1': class PDFPage 
 6 0 obj
 % Page dictionary
-<< /Contents 28 0 R
+<< /Contents 29 0 R
  /MediaBox [ 0
  0
  595.2756
  841.8898 ]
- /Parent 27 0 R
+ /Parent 28 0 R
  /Resources << /Font 1 0 R
  /ProcSet [ /PDF
  /Text
@@ -86,12 +86,12 @@ endobj
 % 'Page2': class PDFPage 
 9 0 obj
 % Page dictionary
-<< /Contents 29 0 R
+<< /Contents 30 0 R
  /MediaBox [ 0
  0
  595.2756
  841.8898 ]
- /Parent 27 0 R
+ /Parent 28 0 R
  /Resources << /Font 1 0 R
  /ProcSet [ /PDF
  /Text
@@ -105,12 +105,12 @@ endobj
 % 'Page3': class PDFPage 
 10 0 obj
 % Page dictionary
-<< /Contents 30 0 R
+<< /Contents 31 0 R
  /MediaBox [ 0
  0
  595.2756
  841.8898 ]
- /Parent 27 0 R
+ /Parent 28 0 R
  /Resources << /Font 1 0 R
  /ProcSet [ /PDF
  /Text
@@ -124,12 +124,12 @@ endobj
 % 'Page4': class PDFPage 
 11 0 obj
 % Page dictionary
-<< /Contents 31 0 R
+<< /Contents 32 0 R
  /MediaBox [ 0
  0
  595.2756
  841.8898 ]
- /Parent 27 0 R
+ /Parent 28 0 R
  /Resources << /Font 1 0 R
  /ProcSet [ /PDF
  /Text
@@ -143,12 +143,12 @@ endobj
 % 'Page5': class PDFPage 
 12 0 obj
 % Page dictionary
-<< /Contents 32 0 R
+<< /Contents 33 0 R
  /MediaBox [ 0
  0
  595.2756
  841.8898 ]
- /Parent 27 0 R
+ /Parent 28 0 R
  /Resources << /Font 1 0 R
  /ProcSet [ /PDF
  /Text
@@ -164,13 +164,13 @@ endobj
 % Document Root
 << /Outlines 15 0 R
  /PageMode /UseNone
- /Pages 27 0 R
+ /Pages 28 0 R
  /Type /Catalog >>
 endobj
 % 'R14': class PDFInfo 
 14 0 obj
 << /Author ()
- /CreationDate (D:20100304161706-01'00')
+ /CreationDate (D:20100304164340-01'00')
  /Keywords ()
  /Producer (ReportLab http://www.reportlab.com)
  /Subject (\(unspecified\))
@@ -178,9 +178,9 @@ endobj
 endobj
 % 'R15': class PDFOutlines 
 15 0 obj
-<< /Count 13
+<< /Count 14
  /First 16 0 R
- /Last 26 0 R
+ /Last 27 0 R
  /Type /Outlines >>
 endobj
 % 'Outline.0': class OutlineEntryObject 
@@ -196,20 +196,20 @@ endobj
 endobj
 % 'Outline.1': class OutlineEntryObject 
 17 0 obj
-<< /Count 8
+<< /Count 9
  /Dest [ 6 0 R
  /XYZ
  62.69291
  404.8236
  0 ]
  /First 18 0 R
- /Last 25 0 R
- /Next 26 0 R
+ /Last 26 0 R
+ /Next 27 0 R
  /Parent 15 0 R
  /Prev 16 0 R
  /Title (URLs) >>
 endobj
-% 'Outline.12.0': class OutlineEntryObject 
+% 'Outline.13.0': class OutlineEntryObject 
 18 0 obj
 << /Dest [ 6 0 R
  /XYZ
@@ -220,7 +220,7 @@ endobj
  /Parent 17 0 R
  /Title (/categories/) >>
 endobj
-% 'Outline.12.1': class OutlineEntryObject 
+% 'Outline.13.1': class OutlineEntryObject 
 19 0 obj
 << /Dest [ 9 0 R
  /XYZ
@@ -232,7 +232,7 @@ endobj
  /Prev 18 0 R
  /Title (/category/) >>
 endobj
-% 'Outline.12.2': class OutlineEntryObject 
+% 'Outline.13.2': class OutlineEntryObject 
 20 0 obj
 << /Count 3
  /Dest [ 9 0 R
@@ -247,7 +247,7 @@ endobj
  /Prev 19 0 R
  /Title (/packages/) >>
 endobj
-% 'Outline.13.0': class OutlineEntryObject 
+% 'Outline.14.0': class OutlineEntryObject 
 21 0 obj
 << /Dest [ 9 0 R
  /XYZ
@@ -258,7 +258,7 @@ endobj
  /Parent 20 0 R
  /Title (Packages) >>
 endobj
-% 'Outline.13.1': class OutlineEntryObject 
+% 'Outline.14.1': class OutlineEntryObject 
 22 0 obj
 << /Dest [ 10 0 R
  /XYZ
@@ -270,7 +270,7 @@ endobj
  /Prev 21 0 R
  /Title (Versions) >>
 endobj
-% 'Outline.13.2': class OutlineEntryObject 
+% 'Outline.14.2': class OutlineEntryObject 
 23 0 obj
 << /Dest [ 10 0 R
  /XYZ
@@ -281,7 +281,7 @@ endobj
  /Prev 22 0 R
  /Title (Variants) >>
 endobj
-% 'Outline.12.3': class OutlineEntryObject 
+% 'Outline.13.3': class OutlineEntryObject 
 24 0 obj
 << /Dest [ 11 0 R
  /XYZ
@@ -293,30 +293,42 @@ endobj
  /Prev 20 0 R
  /Title (/submit/) >>
 endobj
-% 'Outline.12.4': class OutlineEntryObject 
+% 'Outline.13.4': class OutlineEntryObject 
 25 0 obj
 << /Dest [ 11 0 R
  /XYZ
  62.69291
  339.5035
  0 ]
+ /Next 26 0 R
  /Parent 17 0 R
  /Prev 24 0 R
  /Title (/authorized/) >>
 endobj
-% 'Outline.2': class OutlineEntryObject 
+% 'Outline.13.5': class OutlineEntryObject 
 26 0 obj
 << /Dest [ 12 0 R
  /XYZ
  62.69291
  765.0236
  0 ]
+ /Parent 17 0 R
+ /Prev 25 0 R
+ /Title (/search/) >>
+endobj
+% 'Outline.2': class OutlineEntryObject 
+27 0 obj
+<< /Dest [ 12 0 R
+ /XYZ
+ 62.69291
+ 534.6236
+ 0 ]
  /Parent 15 0 R
  /Prev 17 0 R
  /Title (Questions?) >>
 endobj
-% 'R27': class PDFPages 
-27 0 obj
+% 'R28': class PDFPages 
+28 0 obj
 % page tree
 << /Count 5
  /Kids [ 6 0 R
@@ -326,8 +338,8 @@ endobj
  12 0 R ]
  /Type /Pages >>
 endobj
-% 'R28': class PDFStream 
-28 0 obj
+% 'R29': class PDFStream 
+29 0 obj
 % page stream
 << /Length 5550 >>
 stream
@@ -493,8 +505,8 @@ Q
  
 endstream
 endobj
-% 'R29': class PDFStream 
-29 0 obj
+% 'R30': class PDFStream 
+30 0 obj
 % page stream
 << /Length 7249 >>
 stream
@@ -936,8 +948,8 @@ Q
  
 endstream
 endobj
-% 'R30': class PDFStream 
-30 0 obj
+% 'R31': class PDFStream 
+31 0 obj
 % page stream
 << /Length 8008 >>
 stream
@@ -1433,8 +1445,8 @@ Q
  
 endstream
 endobj
-% 'R31': class PDFStream 
-31 0 obj
+% 'R32': class PDFStream 
+32 0 obj
 % page stream
 << /Length 7819 >>
 stream
@@ -1911,20 +1923,95 @@ Q
  
 endstream
 endobj
-% 'R32': class PDFStream 
-32 0 obj
+% 'R33': class PDFStream 
+33 0 obj
 % page stream
-<< /Length 345 >>
+<< /Length 2002 >>
 stream
 1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
 q
-1 0 0 1 62.69291 744.0236 cm
+1 0 0 1 62.69291 747.0236 cm
+q
+BT 1 0 0 1 0 3 Tm 18 TL /F2 15 Tf 0 0 0 rg (/search/) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 729.0236 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F2 10 Tf 0 0 0 rg (Format) Tj /F1 10 Tf (:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 695.8236 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 468.6898 24 re B*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F3 10 Tf 12 TL (/search/?pattern=...) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 62.69291 651.8236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 26 Tm /F1 10 Tf 12 TL .78061 Tw (Use this request to search for packages. Pass a simple \(non-regex\) pattern as a parameter, nirvana will) Tj T* 0 Tw .927633 Tw (search its database and return all packages that contain parts of your pattern in their names, slugs and) Tj T* 0 Tw (author's user names.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 633.8236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (A JSON object mapping package slugs to package names is returned.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 615.8236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Example:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 546.6236 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 468.6898 60 re B*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 38 Tm /F3 10 Tf 12 TL (% curl 'http://nirvana.ooc-lang.org/api/search/?pattern=hel') Tj T* ({"__result": "ok", "helloworld": "Hello World!"}) Tj T* (% curl 'http://nirvana.ooc-lang.org/api/search/?pattern=ndd') Tj T* ({"greg": "greg recursive descent parser generator", "__result": "ok"}) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 62.69291 513.6236 cm
 q
 BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (Questions?) Tj T* ET
 Q
 Q
 q
-1 0 0 1 62.69291 726.0236 cm
+1 0 0 1 62.69291 495.6236 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (If you have any questions, feel free to ask them in our irc channel #ooc-lang on freenode.) Tj T* ET
@@ -1934,7 +2021,7 @@ Q
 endstream
 endobj
 xref
-0 33
+0 34
 0000000000 65535 f
 0000000113 00000 n
 0000000269 00000 n
@@ -1961,21 +2048,22 @@ xref
 0000004528 00000 n
 0000004700 00000 n
 0000004887 00000 n
-0000005060 00000 n
-0000005215 00000 n
-0000005357 00000 n
-0000011006 00000 n
-0000018354 00000 n
-0000026461 00000 n
-0000034379 00000 n
+0000005078 00000 n
+0000005247 00000 n
+0000005402 00000 n
+0000005544 00000 n
+0000011193 00000 n
+0000018541 00000 n
+0000026648 00000 n
+0000034566 00000 n
 trailer
 << /ID 
  % ReportLab generated PDF document -- digest (http://www.reportlab.com) 
- [(\277\360@Hz\257\307}\362\214\236Rk\177\(\301) (\277\360@Hz\257\307}\362\214\236Rk\177\(\301)] 
+ [( \271\362\307\226[A\006\352\224\302\255\341\215\357\326) ( \271\362\307\226[A\006\352\224\302\255\341\215\357\326)] 
 
  /Info 14 0 R
  /Root 13 0 R
- /Size 33 >>
+ /Size 34 >>
 startxref
-34795
+36640
 %%EOF
