@@ -144,8 +144,8 @@ Example::
     {"name": "Wurst", "package": "helloworld", "__result": "ok",
      "variants": ["linux-i686", "src"], "slug": "0.1", "latest": true}
 
-Variant
-^^^^^^^
+Variants
+^^^^^^^^
 
 **Format**::
     
@@ -182,6 +182,54 @@ Examples::
     Origin: meatshop://
     Build: ooc helloworld.ooc
     Binaries: helloworld
+
+/submit/
+~~~~~~~~
+
+**Format**::
+
+    /submit/
+
+Use this request to submit a new usefile to nirvana.
+
+This request has to be issued as a HTTP POST request and requires some form-encoded data:
+
+ * ``usefile``: the contents of the usefile.
+ * ``user``: the uploader's username.
+ * ``token``: the uploader's api token, used for authentication.
+ * ``slug``: the usefile's package slug.
+ * ``checksums``: the contents of the checksums file (default: empty).
+ * ``name``: the variant's name (default: empty).
+
+The package and version are required to exist.
+
+The usefile is required to contain at least the ``Name``, ``Version``, ``Variant`` and ``Origin`` fields.
+
+If the variant was successfully added to the nirvana, a JSON object with a single value (apart from the
+obligatory ``__result`` value, of course) is returned:
+
+``path``: the variant path relative to the nirvana root.
+
+/authorized/
+~~~~~~~~~~~~
+
+**Format**::
+    
+    /authorized/
+
+Use this request to test if a certain user's api token is correct and if this user is authorized to manage a specific variant.
+
+This request has to be issued as a HTTP POST request and requires some form-encoded data:
+
+ * ``user``
+ * ``token``
+ * ``package``: package's slug
+ * ``version``: version's slug
+ * ``variant``: variant's slug
+
+Return a JSON object containing this value:
+
+``authorized``: a boolean value determining if the user is authorized to manage this variant.
 
 Questions?
 ----------

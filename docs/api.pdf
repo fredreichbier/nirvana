@@ -49,12 +49,12 @@ endobj
 % 'Page1': class PDFPage 
 6 0 obj
 % Page dictionary
-<< /Contents 25 0 R
+<< /Contents 28 0 R
  /MediaBox [ 0
  0
  595.2756
  841.8898 ]
- /Parent 24 0 R
+ /Parent 27 0 R
  /Resources << /Font 1 0 R
  /ProcSet [ /PDF
  /Text
@@ -86,12 +86,12 @@ endobj
 % 'Page2': class PDFPage 
 9 0 obj
 % Page dictionary
-<< /Contents 26 0 R
+<< /Contents 29 0 R
  /MediaBox [ 0
  0
  595.2756
  841.8898 ]
- /Parent 24 0 R
+ /Parent 27 0 R
  /Resources << /Font 1 0 R
  /ProcSet [ /PDF
  /Text
@@ -105,12 +105,12 @@ endobj
 % 'Page3': class PDFPage 
 10 0 obj
 % Page dictionary
-<< /Contents 27 0 R
+<< /Contents 30 0 R
  /MediaBox [ 0
  0
  595.2756
  841.8898 ]
- /Parent 24 0 R
+ /Parent 27 0 R
  /Resources << /Font 1 0 R
  /ProcSet [ /PDF
  /Text
@@ -124,12 +124,12 @@ endobj
 % 'Page4': class PDFPage 
 11 0 obj
 % Page dictionary
-<< /Contents 28 0 R
+<< /Contents 31 0 R
  /MediaBox [ 0
  0
  595.2756
  841.8898 ]
- /Parent 24 0 R
+ /Parent 27 0 R
  /Resources << /Font 1 0 R
  /ProcSet [ /PDF
  /Text
@@ -140,150 +140,194 @@ endobj
  /Trans <<  >>
  /Type /Page >>
 endobj
-% 'R12': class PDFCatalog 
+% 'Page5': class PDFPage 
 12 0 obj
+% Page dictionary
+<< /Contents 32 0 R
+ /MediaBox [ 0
+ 0
+ 595.2756
+ 841.8898 ]
+ /Parent 27 0 R
+ /Resources << /Font 1 0 R
+ /ProcSet [ /PDF
+ /Text
+ /ImageB
+ /ImageC
+ /ImageI ] >>
+ /Rotate 0
+ /Trans <<  >>
+ /Type /Page >>
+endobj
+% 'R13': class PDFCatalog 
+13 0 obj
 % Document Root
-<< /Outlines 14 0 R
+<< /Outlines 15 0 R
  /PageMode /UseNone
- /Pages 24 0 R
+ /Pages 27 0 R
  /Type /Catalog >>
 endobj
-% 'R13': class PDFInfo 
-13 0 obj
+% 'R14': class PDFInfo 
+14 0 obj
 << /Author ()
- /CreationDate (D:20100304160101-01'00')
+ /CreationDate (D:20100304161706-01'00')
  /Keywords ()
  /Producer (ReportLab http://www.reportlab.com)
  /Subject (\(unspecified\))
  /Title (API) >>
 endobj
-% 'R14': class PDFOutlines 
-14 0 obj
-<< /Count 11
- /First 15 0 R
- /Last 23 0 R
+% 'R15': class PDFOutlines 
+15 0 obj
+<< /Count 13
+ /First 16 0 R
+ /Last 26 0 R
  /Type /Outlines >>
 endobj
 % 'Outline.0': class OutlineEntryObject 
-15 0 obj
+16 0 obj
 << /Dest [ 6 0 R
  /XYZ
  62.69291
  695.0236
  0 ]
- /Next 16 0 R
- /Parent 14 0 R
+ /Next 17 0 R
+ /Parent 15 0 R
  /Title (Requests) >>
 endobj
 % 'Outline.1': class OutlineEntryObject 
-16 0 obj
-<< /Count 6
+17 0 obj
+<< /Count 8
  /Dest [ 6 0 R
  /XYZ
  62.69291
  404.8236
  0 ]
- /First 17 0 R
- /Last 19 0 R
- /Next 23 0 R
- /Parent 14 0 R
- /Prev 15 0 R
+ /First 18 0 R
+ /Last 25 0 R
+ /Next 26 0 R
+ /Parent 15 0 R
+ /Prev 16 0 R
  /Title (URLs) >>
 endobj
-% 'Outline.10.0': class OutlineEntryObject 
-17 0 obj
+% 'Outline.12.0': class OutlineEntryObject 
+18 0 obj
 << /Dest [ 6 0 R
  /XYZ
  62.69291
  371.8236
  0 ]
- /Next 18 0 R
- /Parent 16 0 R
+ /Next 19 0 R
+ /Parent 17 0 R
  /Title (/categories/) >>
 endobj
-% 'Outline.10.1': class OutlineEntryObject 
-18 0 obj
+% 'Outline.12.1': class OutlineEntryObject 
+19 0 obj
 << /Dest [ 9 0 R
  /XYZ
  62.69291
  765.0236
  0 ]
- /Next 19 0 R
- /Parent 16 0 R
- /Prev 17 0 R
+ /Next 20 0 R
+ /Parent 17 0 R
+ /Prev 18 0 R
  /Title (/category/) >>
 endobj
-% 'Outline.10.2': class OutlineEntryObject 
-19 0 obj
+% 'Outline.12.2': class OutlineEntryObject 
+20 0 obj
 << /Count 3
  /Dest [ 9 0 R
  /XYZ
  62.69291
  468.6236
  0 ]
- /First 20 0 R
- /Last 22 0 R
- /Parent 16 0 R
- /Prev 18 0 R
+ /First 21 0 R
+ /Last 23 0 R
+ /Next 24 0 R
+ /Parent 17 0 R
+ /Prev 19 0 R
  /Title (/packages/) >>
 endobj
-% 'Outline.11.0': class OutlineEntryObject 
-20 0 obj
+% 'Outline.13.0': class OutlineEntryObject 
+21 0 obj
 << /Dest [ 9 0 R
  /XYZ
  62.69291
  438.6236
  0 ]
- /Next 21 0 R
- /Parent 19 0 R
+ /Next 22 0 R
+ /Parent 20 0 R
  /Title (Packages) >>
 endobj
-% 'Outline.11.1': class OutlineEntryObject 
-21 0 obj
+% 'Outline.13.1': class OutlineEntryObject 
+22 0 obj
 << /Dest [ 10 0 R
  /XYZ
  62.69291
  765.0236
  0 ]
- /Next 22 0 R
- /Parent 19 0 R
- /Prev 20 0 R
+ /Next 23 0 R
+ /Parent 20 0 R
+ /Prev 21 0 R
  /Title (Versions) >>
 endobj
-% 'Outline.11.2': class OutlineEntryObject 
-22 0 obj
+% 'Outline.13.2': class OutlineEntryObject 
+23 0 obj
 << /Dest [ 10 0 R
  /XYZ
  62.69291
  443.3441
  0 ]
- /Parent 19 0 R
- /Prev 21 0 R
- /Title (Variant) >>
+ /Parent 20 0 R
+ /Prev 22 0 R
+ /Title (Variants) >>
 endobj
-% 'Outline.2': class OutlineEntryObject 
-23 0 obj
+% 'Outline.12.3': class OutlineEntryObject 
+24 0 obj
 << /Dest [ 11 0 R
  /XYZ
  62.69291
  647.7035
  0 ]
- /Parent 14 0 R
- /Prev 16 0 R
+ /Next 25 0 R
+ /Parent 17 0 R
+ /Prev 20 0 R
+ /Title (/submit/) >>
+endobj
+% 'Outline.12.4': class OutlineEntryObject 
+25 0 obj
+<< /Dest [ 11 0 R
+ /XYZ
+ 62.69291
+ 339.5035
+ 0 ]
+ /Parent 17 0 R
+ /Prev 24 0 R
+ /Title (/authorized/) >>
+endobj
+% 'Outline.2': class OutlineEntryObject 
+26 0 obj
+<< /Dest [ 12 0 R
+ /XYZ
+ 62.69291
+ 765.0236
+ 0 ]
+ /Parent 15 0 R
+ /Prev 17 0 R
  /Title (Questions?) >>
 endobj
-% 'R24': class PDFPages 
-24 0 obj
+% 'R27': class PDFPages 
+27 0 obj
 % page tree
-<< /Count 4
+<< /Count 5
  /Kids [ 6 0 R
  9 0 R
  10 0 R
- 11 0 R ]
+ 11 0 R
+ 12 0 R ]
  /Type /Pages >>
 endobj
-% 'R25': class PDFStream 
-25 0 obj
+% 'R28': class PDFStream 
+28 0 obj
 % page stream
 << /Length 5550 >>
 stream
@@ -449,8 +493,8 @@ Q
  
 endstream
 endobj
-% 'R26': class PDFStream 
-26 0 obj
+% 'R29': class PDFStream 
+29 0 obj
 % page stream
 << /Length 7249 >>
 stream
@@ -892,10 +936,10 @@ Q
  
 endstream
 endobj
-% 'R27': class PDFStream 
-27 0 obj
+% 'R30': class PDFStream 
+30 0 obj
 % page stream
-<< /Length 8007 >>
+<< /Length 8008 >>
 stream
 1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
 q
@@ -1127,7 +1171,7 @@ Q
 q
 1 0 0 1 62.69291 428.3441 cm
 q
-BT 1 0 0 1 0 2.5 Tm 15 TL /F6 12.5 Tf 0 0 0 rg (Variant) Tj T* ET
+BT 1 0 0 1 0 2.5 Tm 15 TL /F6 12.5 Tf 0 0 0 rg (Variants) Tj T* ET
 Q
 Q
 q
@@ -1389,10 +1433,10 @@ Q
  
 endstream
 endobj
-% 'R28': class PDFStream 
-28 0 obj
+% 'R31': class PDFStream 
+31 0 obj
 % page stream
-<< /Length 889 >>
+<< /Length 7819 >>
 stream
 1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
 q
@@ -1417,13 +1461,470 @@ Q
 Q
 Q
 q
-1 0 0 1 62.69291 626.7035 cm
+1 0 0 1 62.69291 629.7035 cm
+q
+BT 1 0 0 1 0 3 Tm 18 TL /F2 15 Tf 0 0 0 rg (/submit/) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 611.7035 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F2 10 Tf 0 0 0 rg (Format) Tj /F1 10 Tf (:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 578.5035 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 468.6898 24 re B*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F3 10 Tf 12 TL (/submit/) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 62.69291 558.5035 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Use this request to submit a new usefile to nirvana.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 540.5035 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (This request has to be issued as a HTTP POST request and requires some form-encoded data:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 534.5035 cm
+Q
+q
+1 0 0 1 62.69291 435.5035 cm
+0 0 0 rg
+BT /F5 10 Tf 12 TL ET
+BT 1 0 0 1 0 5 Tm  T* ET
+q
+1 0 0 1 23 96 cm
+Q
+q
+1 0 0 1 23 78 cm
+0 0 0 rg
+BT /F5 10 Tf 12 TL ET
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 3 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F3 10 Tf 0 0 0 rg (usefile) Tj /F1 10 Tf (: the contents of the usefile.) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 23 78 cm
+Q
+q
+1 0 0 1 23 81 cm
+Q
+q
+1 0 0 1 23 63 cm
+0 0 0 rg
+BT /F5 10 Tf 12 TL ET
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 3 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F3 10 Tf 0 0 0 rg (user) Tj /F1 10 Tf (: the uploader's username.) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 23 63 cm
+Q
+q
+1 0 0 1 23 66 cm
+Q
+q
+1 0 0 1 23 48 cm
+0 0 0 rg
+BT /F5 10 Tf 12 TL ET
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 3 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F3 10 Tf 0 0 0 rg (token) Tj /F1 10 Tf (: the uploader's api token, used for authentication.) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 23 48 cm
+Q
+q
+1 0 0 1 23 51 cm
+Q
+q
+1 0 0 1 23 33 cm
+0 0 0 rg
+BT /F5 10 Tf 12 TL ET
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 3 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F3 10 Tf 0 0 0 rg (slug) Tj /F1 10 Tf (: the usefile's package slug.) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 23 33 cm
+Q
+q
+1 0 0 1 23 36 cm
+Q
+q
+1 0 0 1 23 18 cm
+0 0 0 rg
+BT /F5 10 Tf 12 TL ET
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 3 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F3 10 Tf 0 0 0 rg (checksums) Tj /F1 10 Tf (: the contents of the checksums file \(default: empty\).) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 23 18 cm
+Q
+q
+1 0 0 1 23 21 cm
+Q
+q
+1 0 0 1 23 3 cm
+0 0 0 rg
+BT /F5 10 Tf 12 TL ET
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 3 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F3 10 Tf 0 0 0 rg (name) Tj /F1 10 Tf (: the variant's name \(default: empty\).) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 23 3 cm
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 435.5035 cm
+Q
+q
+1 0 0 1 62.69291 417.5035 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (The package and version are required to exist.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 399.5035 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 0 rg (The usefile is required to contain at least the ) Tj /F3 10 Tf (Name) Tj /F1 10 Tf (, ) Tj /F3 10 Tf (Version) Tj /F1 10 Tf (, ) Tj /F3 10 Tf (Variant ) Tj /F1 10 Tf (and ) Tj /F3 10 Tf (Origin ) Tj /F1 10 Tf (fields.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 369.5035 cm
+q
+BT 1 0 0 1 0 14 Tm 1.155542 Tw 12 TL /F1 10 Tf 0 0 0 rg (If the variant was successfully added to the nirvana, a JSON object with a single value \(apart from the) Tj T* 0 Tw (obligatory ) Tj /F3 10 Tf (__result ) Tj /F1 10 Tf (value, of course\) is returned:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 351.5035 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F3 10 Tf 0 0 0 rg (path) Tj /F1 10 Tf (: the variant path relative to the nirvana root.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 321.5035 cm
+q
+BT 1 0 0 1 0 3 Tm 18 TL /F2 15 Tf 0 0 0 rg (/authorized/) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 303.5035 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F2 10 Tf 0 0 0 rg (Format) Tj /F1 10 Tf (:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 270.3035 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 468.6898 24 re B*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F3 10 Tf 12 TL (/authorized/) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 62.69291 238.3035 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL .819989 Tw (Use this request to test if a certain user's api token is correct and if this user is authorized to manage a) Tj T* 0 Tw (specific variant.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 220.3035 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (This request has to be issued as a HTTP POST request and requires some form-encoded data:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 214.3035 cm
+Q
+q
+1 0 0 1 62.69291 130.3035 cm
+0 0 0 rg
+BT /F5 10 Tf 12 TL ET
+BT 1 0 0 1 0 5 Tm  T* ET
+q
+1 0 0 1 23 81 cm
+Q
+q
+1 0 0 1 23 63 cm
+0 0 0 rg
+BT /F5 10 Tf 12 TL ET
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F3 10 Tf 12 TL (user) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 23 63 cm
+Q
+q
+1 0 0 1 23 66 cm
+Q
+q
+1 0 0 1 23 48 cm
+0 0 0 rg
+BT /F5 10 Tf 12 TL ET
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F3 10 Tf 12 TL (token) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 23 48 cm
+Q
+q
+1 0 0 1 23 51 cm
+Q
+q
+1 0 0 1 23 33 cm
+0 0 0 rg
+BT /F5 10 Tf 12 TL ET
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 3 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F3 10 Tf 0 0 0 rg (package) Tj /F1 10 Tf (: package's slug) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 23 33 cm
+Q
+q
+1 0 0 1 23 36 cm
+Q
+q
+1 0 0 1 23 18 cm
+0 0 0 rg
+BT /F5 10 Tf 12 TL ET
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 3 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F3 10 Tf 0 0 0 rg (version) Tj /F1 10 Tf (: version's slug) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 23 18 cm
+Q
+q
+1 0 0 1 23 21 cm
+Q
+q
+1 0 0 1 23 3 cm
+0 0 0 rg
+BT /F5 10 Tf 12 TL ET
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 3 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F3 10 Tf 0 0 0 rg (variant) Tj /F1 10 Tf (: variant's slug) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 23 3 cm
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 130.3035 cm
+Q
+q
+1 0 0 1 62.69291 112.3035 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Return a JSON object containing this value:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 94.3035 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F3 10 Tf 0 0 0 rg (authorized) Tj /F1 10 Tf (: a boolean value determining if the user is authorized to manage this variant.) Tj T* ET
+Q
+Q
+ 
+endstream
+endobj
+% 'R32': class PDFStream 
+32 0 obj
+% page stream
+<< /Length 345 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 744.0236 cm
 q
 BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (Questions?) Tj T* ET
 Q
 Q
 q
-1 0 0 1 62.69291 608.7035 cm
+1 0 0 1 62.69291 726.0236 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (If you have any questions, feel free to ask them in our irc channel #ooc-lang on freenode.) Tj T* ET
@@ -1433,7 +1934,7 @@ Q
 endstream
 endobj
 xref
-0 29
+0 33
 0000000000 65535 f
 0000000113 00000 n
 0000000269 00000 n
@@ -1446,31 +1947,35 @@ xref
 0000001586 00000 n
 0000001865 00000 n
 0000002145 00000 n
-0000002426 00000 n
-0000002564 00000 n
-0000002779 00000 n
-0000002905 00000 n
-0000003073 00000 n
-0000003297 00000 n
-0000003472 00000 n
-0000003660 00000 n
-0000003875 00000 n
-0000004046 00000 n
-0000004233 00000 n
-0000004401 00000 n
-0000004556 00000 n
-0000004689 00000 n
-0000010338 00000 n
-0000017686 00000 n
-0000025792 00000 n
+0000002425 00000 n
+0000002706 00000 n
+0000002844 00000 n
+0000003059 00000 n
+0000003185 00000 n
+0000003353 00000 n
+0000003577 00000 n
+0000003752 00000 n
+0000003940 00000 n
+0000004170 00000 n
+0000004341 00000 n
+0000004528 00000 n
+0000004700 00000 n
+0000004887 00000 n
+0000005060 00000 n
+0000005215 00000 n
+0000005357 00000 n
+0000011006 00000 n
+0000018354 00000 n
+0000026461 00000 n
+0000034379 00000 n
 trailer
 << /ID 
  % ReportLab generated PDF document -- digest (http://www.reportlab.com) 
- [(\300\346\344\376\022\241\2052TA\356\324!K\032\317) (\300\346\344\376\022\241\2052TA\356\324!K\032\317)] 
+ [(\277\360@Hz\257\307}\362\214\236Rk\177\(\301) (\277\360@Hz\257\307}\362\214\236Rk\177\(\301)] 
 
- /Info 13 0 R
- /Root 12 0 R
- /Size 29 >>
+ /Info 14 0 R
+ /Root 13 0 R
+ /Size 33 >>
 startxref
-26752
+34795
 %%EOF
