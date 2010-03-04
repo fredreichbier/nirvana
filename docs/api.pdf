@@ -1,0 +1,1476 @@
+%PDF-1.4
+%“Œ‹ž ReportLab Generated PDF document http://www.reportlab.com
+% 'BasicFonts': class PDFDictionary 
+1 0 obj
+% The standard fonts dictionary
+<< /F1 2 0 R
+ /F2 3 0 R
+ /F3 4 0 R
+ /F4 5 0 R
+ /F5 7 0 R
+ /F6 8 0 R >>
+endobj
+% 'F1': class PDFType1Font 
+2 0 obj
+% Font Helvetica
+<< /BaseFont /Helvetica
+ /Encoding /WinAnsiEncoding
+ /Name /F1
+ /Subtype /Type1
+ /Type /Font >>
+endobj
+% 'F2': class PDFType1Font 
+3 0 obj
+% Font Helvetica-Bold
+<< /BaseFont /Helvetica-Bold
+ /Encoding /WinAnsiEncoding
+ /Name /F2
+ /Subtype /Type1
+ /Type /Font >>
+endobj
+% 'F3': class PDFType1Font 
+4 0 obj
+% Font Courier
+<< /BaseFont /Courier
+ /Encoding /WinAnsiEncoding
+ /Name /F3
+ /Subtype /Type1
+ /Type /Font >>
+endobj
+% 'F4': class PDFType1Font 
+5 0 obj
+% Font Helvetica-Oblique
+<< /BaseFont /Helvetica-Oblique
+ /Encoding /WinAnsiEncoding
+ /Name /F4
+ /Subtype /Type1
+ /Type /Font >>
+endobj
+% 'Page1': class PDFPage 
+6 0 obj
+% Page dictionary
+<< /Contents 25 0 R
+ /MediaBox [ 0
+ 0
+ 595.2756
+ 841.8898 ]
+ /Parent 24 0 R
+ /Resources << /Font 1 0 R
+ /ProcSet [ /PDF
+ /Text
+ /ImageB
+ /ImageC
+ /ImageI ] >>
+ /Rotate 0
+ /Trans <<  >>
+ /Type /Page >>
+endobj
+% 'F5': class PDFType1Font 
+7 0 obj
+% Font Times-Roman
+<< /BaseFont /Times-Roman
+ /Encoding /WinAnsiEncoding
+ /Name /F5
+ /Subtype /Type1
+ /Type /Font >>
+endobj
+% 'F6': class PDFType1Font 
+8 0 obj
+% Font Helvetica-BoldOblique
+<< /BaseFont /Helvetica-BoldOblique
+ /Encoding /WinAnsiEncoding
+ /Name /F6
+ /Subtype /Type1
+ /Type /Font >>
+endobj
+% 'Page2': class PDFPage 
+9 0 obj
+% Page dictionary
+<< /Contents 26 0 R
+ /MediaBox [ 0
+ 0
+ 595.2756
+ 841.8898 ]
+ /Parent 24 0 R
+ /Resources << /Font 1 0 R
+ /ProcSet [ /PDF
+ /Text
+ /ImageB
+ /ImageC
+ /ImageI ] >>
+ /Rotate 0
+ /Trans <<  >>
+ /Type /Page >>
+endobj
+% 'Page3': class PDFPage 
+10 0 obj
+% Page dictionary
+<< /Contents 27 0 R
+ /MediaBox [ 0
+ 0
+ 595.2756
+ 841.8898 ]
+ /Parent 24 0 R
+ /Resources << /Font 1 0 R
+ /ProcSet [ /PDF
+ /Text
+ /ImageB
+ /ImageC
+ /ImageI ] >>
+ /Rotate 0
+ /Trans <<  >>
+ /Type /Page >>
+endobj
+% 'Page4': class PDFPage 
+11 0 obj
+% Page dictionary
+<< /Contents 28 0 R
+ /MediaBox [ 0
+ 0
+ 595.2756
+ 841.8898 ]
+ /Parent 24 0 R
+ /Resources << /Font 1 0 R
+ /ProcSet [ /PDF
+ /Text
+ /ImageB
+ /ImageC
+ /ImageI ] >>
+ /Rotate 0
+ /Trans <<  >>
+ /Type /Page >>
+endobj
+% 'R12': class PDFCatalog 
+12 0 obj
+% Document Root
+<< /Outlines 14 0 R
+ /PageMode /UseNone
+ /Pages 24 0 R
+ /Type /Catalog >>
+endobj
+% 'R13': class PDFInfo 
+13 0 obj
+<< /Author ()
+ /CreationDate (D:20100304160101-01'00')
+ /Keywords ()
+ /Producer (ReportLab http://www.reportlab.com)
+ /Subject (\(unspecified\))
+ /Title (API) >>
+endobj
+% 'R14': class PDFOutlines 
+14 0 obj
+<< /Count 11
+ /First 15 0 R
+ /Last 23 0 R
+ /Type /Outlines >>
+endobj
+% 'Outline.0': class OutlineEntryObject 
+15 0 obj
+<< /Dest [ 6 0 R
+ /XYZ
+ 62.69291
+ 695.0236
+ 0 ]
+ /Next 16 0 R
+ /Parent 14 0 R
+ /Title (Requests) >>
+endobj
+% 'Outline.1': class OutlineEntryObject 
+16 0 obj
+<< /Count 6
+ /Dest [ 6 0 R
+ /XYZ
+ 62.69291
+ 404.8236
+ 0 ]
+ /First 17 0 R
+ /Last 19 0 R
+ /Next 23 0 R
+ /Parent 14 0 R
+ /Prev 15 0 R
+ /Title (URLs) >>
+endobj
+% 'Outline.10.0': class OutlineEntryObject 
+17 0 obj
+<< /Dest [ 6 0 R
+ /XYZ
+ 62.69291
+ 371.8236
+ 0 ]
+ /Next 18 0 R
+ /Parent 16 0 R
+ /Title (/categories/) >>
+endobj
+% 'Outline.10.1': class OutlineEntryObject 
+18 0 obj
+<< /Dest [ 9 0 R
+ /XYZ
+ 62.69291
+ 765.0236
+ 0 ]
+ /Next 19 0 R
+ /Parent 16 0 R
+ /Prev 17 0 R
+ /Title (/category/) >>
+endobj
+% 'Outline.10.2': class OutlineEntryObject 
+19 0 obj
+<< /Count 3
+ /Dest [ 9 0 R
+ /XYZ
+ 62.69291
+ 468.6236
+ 0 ]
+ /First 20 0 R
+ /Last 22 0 R
+ /Parent 16 0 R
+ /Prev 18 0 R
+ /Title (/packages/) >>
+endobj
+% 'Outline.11.0': class OutlineEntryObject 
+20 0 obj
+<< /Dest [ 9 0 R
+ /XYZ
+ 62.69291
+ 438.6236
+ 0 ]
+ /Next 21 0 R
+ /Parent 19 0 R
+ /Title (Packages) >>
+endobj
+% 'Outline.11.1': class OutlineEntryObject 
+21 0 obj
+<< /Dest [ 10 0 R
+ /XYZ
+ 62.69291
+ 765.0236
+ 0 ]
+ /Next 22 0 R
+ /Parent 19 0 R
+ /Prev 20 0 R
+ /Title (Versions) >>
+endobj
+% 'Outline.11.2': class OutlineEntryObject 
+22 0 obj
+<< /Dest [ 10 0 R
+ /XYZ
+ 62.69291
+ 443.3441
+ 0 ]
+ /Parent 19 0 R
+ /Prev 21 0 R
+ /Title (Variant) >>
+endobj
+% 'Outline.2': class OutlineEntryObject 
+23 0 obj
+<< /Dest [ 11 0 R
+ /XYZ
+ 62.69291
+ 647.7035
+ 0 ]
+ /Parent 14 0 R
+ /Prev 16 0 R
+ /Title (Questions?) >>
+endobj
+% 'R24': class PDFPages 
+24 0 obj
+% page tree
+<< /Count 4
+ /Kids [ 6 0 R
+ 9 0 R
+ 10 0 R
+ 11 0 R ]
+ /Type /Pages >>
+endobj
+% 'R25': class PDFStream 
+25 0 obj
+% page stream
+<< /Length 5550 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 741.0236 cm
+q
+BT 1 0 0 1 0 4 Tm 218.2749 0 Td 24 TL /F2 20 Tf 0 0 0 rg (API) Tj T* -218.2749 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 707.0236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL 3.097674 Tw (The nirvana has an RESTful-ish JSON-based API. This means you can access information about) Tj T* 0 Tw (uploaded packages from your client application or even upload new packages.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 674.0236 cm
+q
+BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (Requests) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 632.0236 cm
+q
+BT 1 0 0 1 0 26 Tm 3.083828 Tw 12 TL /F1 10 Tf 0 0 0 rg (All API urls are "subdirectories" of ) Tj /F3 10 Tf (http://NIRVANA/api/) Tj /F1 10 Tf (, so if you're using the official nirvana) Tj T* 0 Tw .69498 Tw (instance, it is ) Tj /F3 10 Tf (http://nirvana.ooc-lang.org/api/) Tj /F1 10 Tf (. All API urls given in this documentation will be) Tj T* 0 Tw (relative to this "root" url.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 578.0236 cm
+q
+BT 1 0 0 1 0 38 Tm .095988 Tw 12 TL /F1 10 Tf 0 0 0 rg (If you want to issue a request for information, just perform a HTTP GET request on this url as described in) Tj T* 0 Tw 1.076235 Tw (this documentation. For some urls, you'll be able to add an optional ) Tj /F3 10 Tf (type ) Tj /F1 10 Tf (parameter that specifies the) Tj T* 0 Tw .490574 Tw (desired result format; this will be explicitly denoted in the url description. If you've passed an invalid type,) Tj T* 0 Tw (an error response \(see below\) will be given. The error text will be "Unknown type: ) Tj /F4 10 Tf (type) Tj /F1 10 Tf (".) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 560.0236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (All requests return a JSON object. The exact format depends on the url and the specified format.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 506.0236 cm
+q
+BT 1 0 0 1 0 38 Tm .874104 Tw 12 TL /F1 10 Tf 0 0 0 rg (In any case, this JSON object will contain a special value ) Tj /F3 10 Tf ("__result" ) Tj /F1 10 Tf (whose value is either ) Tj /F3 10 Tf ("ok" ) Tj /F1 10 Tf (\(if) Tj T* 0 Tw .621751 Tw (the request was successful and the desired data is returned\) or ) Tj /F3 10 Tf ("error" ) Tj /F1 10 Tf (\(if the request failed, e.g. due) Tj T* 0 Tw 2.703555 Tw (to invalid input values\). If ) Tj /F3 10 Tf ("__result" ) Tj /F1 10 Tf (is ) Tj /F3 10 Tf ("error") Tj /F1 10 Tf (, the response will contain one additional field) Tj T* 0 Tw /F3 10 Tf ("__text" ) Tj /F1 10 Tf (that contains a error description as a string named. Example:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 436.8236 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 468.6898 60 re B*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 38 Tm /F3 10 Tf 12 TL ({) Tj T* (    "__result": "error",) Tj T* (    "__text": "ZOMBIES!!!") Tj T* (}) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 62.69291 416.8236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Oh, and never ever forget the trailing slash.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 383.8236 cm
+q
+BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (URLs) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 353.8236 cm
+q
+BT 1 0 0 1 0 3 Tm 18 TL /F2 15 Tf 0 0 0 rg (/categories/) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 335.8236 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F2 10 Tf 0 0 0 rg (Format) Tj /F1 10 Tf (:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 302.6236 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 468.6898 24 re B*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F3 10 Tf 12 TL (/categories/) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 62.69291 282.6236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Get a list of all registered package categories.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 264.6236 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 0 rg (You can pass the ) Tj /F3 10 Tf (type ) Tj /F1 10 Tf (parameter here whose value can be ) Tj /F3 10 Tf (contents ) Tj /F1 10 Tf (\(default\) or ) Tj /F3 10 Tf (details) Tj /F1 10 Tf (.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 222.6236 cm
+q
+BT 1 0 0 1 0 26 Tm 1.879985 Tw 12 TL /F1 10 Tf 0 0 0 rg (If ) Tj /F3 10 Tf (type ) Tj /F1 10 Tf (is ) Tj /F3 10 Tf (contents) Tj /F1 10 Tf (, return a JSON object mapping category slugs to category names. If ) Tj /F3 10 Tf (type ) Tj /F1 10 Tf (is) Tj T* 0 Tw .316235 Tw /F3 10 Tf (details) Tj /F1 10 Tf (, return a JSON object with one value ) Tj /F3 10 Tf (categories ) Tj /F1 10 Tf (that is mapped to a JSON array containing) Tj T* 0 Tw (all available category slugs.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 204.6236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Example:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 87.42362 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 468.6898 108 re B*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 86 Tm /F3 10 Tf 12 TL (% curl 'http://nirvana.ooc-lang.org/api/categories/') Tj T* ({"lang-libs": "Libraries useful for programming languages development",) Tj T* ( "nonsense": "Temporary packages for testing.", "__result": "ok"}) Tj T* (% curl 'http://nirvana.ooc-lang.org/api/categories/?type=contents') Tj T* ({"lang-libs": "Libraries useful for programming languages development",) Tj T* ( "nonsense": "Temporary packages for testing.", "__result": "ok"}) Tj T* (% curl 'http://nirvana.ooc-lang.org/api/categories/?type=details') Tj T* ({"__result": "ok", "categories": ["nonsense", "lang-libs"]}) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+ 
+endstream
+endobj
+% 'R26': class PDFStream 
+26 0 obj
+% page stream
+<< /Length 7249 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 747.0236 cm
+q
+BT 1 0 0 1 0 3 Tm 18 TL /F2 15 Tf 0 0 0 rg (/category/) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 729.0236 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F2 10 Tf 0 0 0 rg (Format) Tj /F1 10 Tf (:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 695.8236 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 468.6898 24 re B*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F3 10 Tf 12 TL (/category/:slug/) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 62.69291 675.8236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Use this URL to demand information about one specific category given by its slug.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 657.8236 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 0 rg (If ) Tj /F3 10 Tf (type ) Tj /F1 10 Tf (is ) Tj /F3 10 Tf (contents ) Tj /F1 10 Tf (\(default\), return a JSON object mapping package slugs to package names.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 639.8236 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 0 rg (If ) Tj /F3 10 Tf (type ) Tj /F1 10 Tf (is ) Tj /F3 10 Tf (details) Tj /F1 10 Tf (, return a JSON object containing the following values:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 633.8236 cm
+Q
+q
+1 0 0 1 62.69291 579.8236 cm
+0 0 0 rg
+BT /F5 10 Tf 12 TL ET
+BT 1 0 0 1 0 5 Tm  T* ET
+q
+1 0 0 1 23 51 cm
+Q
+q
+1 0 0 1 23 33 cm
+0 0 0 rg
+BT /F5 10 Tf 12 TL ET
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F3 10 Tf 12 TL (slug) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 23 33 cm
+Q
+q
+1 0 0 1 23 36 cm
+Q
+q
+1 0 0 1 23 18 cm
+0 0 0 rg
+BT /F5 10 Tf 12 TL ET
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F3 10 Tf 12 TL (name) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 23 18 cm
+Q
+q
+1 0 0 1 23 21 cm
+Q
+q
+1 0 0 1 23 3 cm
+0 0 0 rg
+BT /F5 10 Tf 12 TL ET
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 3 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F3 10 Tf 0 0 0 rg (package) Tj /F1 10 Tf (: an array of package slugs connected to this category.) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 23 3 cm
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 579.8236 cm
+Q
+q
+1 0 0 1 62.69291 561.8236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Example:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 480.6236 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 468.6898 72 re B*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 50 Tm /F3 10 Tf 12 TL (% curl 'http://nirvana.ooc-lang.org/api/category/nonsense/') Tj T* ({"helloworld": "Hello World!", "empty": "Empty", "__result": "ok"}) Tj T* (% curl 'http://nirvana.ooc-lang.org/api/category/nonsense/?type=details') Tj T* ({"__result": "ok", "packages": ["helloworld", "empty"],) Tj T* ( "slug": "nonsense", "name": "Temporary packages for testing."}) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 62.69291 450.6236 cm
+q
+BT 1 0 0 1 0 3 Tm 18 TL /F2 15 Tf 0 0 0 rg (/packages/) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 423.6236 cm
+q
+BT 1 0 0 1 0 2.5 Tm 15 TL /F6 12.5 Tf 0 0 0 rg (Packages) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 405.6236 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F2 10 Tf 0 0 0 rg (Format) Tj /F1 10 Tf (:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 372.4236 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 468.6898 24 re B*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F3 10 Tf 12 TL (/packages/:package_slug/) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 62.69291 352.4236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Use this url to get information about one specific package.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 334.4236 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 0 rg (If ) Tj /F3 10 Tf (type ) Tj /F1 10 Tf (is ) Tj /F3 10 Tf (contents ) Tj /F1 10 Tf (\(default\), return a JSON object mapping version slugs to version names.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 316.4236 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 0 rg (If ) Tj /F3 10 Tf (type ) Tj /F1 10 Tf (is ) Tj /F3 10 Tf (details) Tj /F1 10 Tf (, return a JSON object containing the following values:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 310.4236 cm
+Q
+q
+1 0 0 1 62.69291 211.4236 cm
+0 0 0 rg
+BT /F5 10 Tf 12 TL ET
+BT 1 0 0 1 0 5 Tm  T* ET
+q
+1 0 0 1 23 96 cm
+Q
+q
+1 0 0 1 23 78 cm
+0 0 0 rg
+BT /F5 10 Tf 12 TL ET
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F3 10 Tf 12 TL (slug) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 23 78 cm
+Q
+q
+1 0 0 1 23 81 cm
+Q
+q
+1 0 0 1 23 63 cm
+0 0 0 rg
+BT /F5 10 Tf 12 TL ET
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F3 10 Tf 12 TL (name) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 23 63 cm
+Q
+q
+1 0 0 1 23 66 cm
+Q
+q
+1 0 0 1 23 48 cm
+0 0 0 rg
+BT /F5 10 Tf 12 TL ET
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F3 10 Tf 12 TL (author) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 23 48 cm
+Q
+q
+1 0 0 1 23 51 cm
+Q
+q
+1 0 0 1 23 33 cm
+0 0 0 rg
+BT /F5 10 Tf 12 TL ET
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F3 10 Tf 12 TL (homepage) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 23 33 cm
+Q
+q
+1 0 0 1 23 36 cm
+Q
+q
+1 0 0 1 23 18 cm
+0 0 0 rg
+BT /F5 10 Tf 12 TL ET
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 3 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F3 10 Tf 0 0 0 rg (latest_version) Tj /F1 10 Tf (: the slug of the version marked as "latest".) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 23 18 cm
+Q
+q
+1 0 0 1 23 21 cm
+Q
+q
+1 0 0 1 23 3 cm
+0 0 0 rg
+BT /F5 10 Tf 12 TL ET
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 3 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F3 10 Tf 0 0 0 rg (versions) Tj /F1 10 Tf (: an array of version slugs.) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 23 3 cm
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 211.4236 cm
+Q
+q
+1 0 0 1 62.69291 193.4236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Example:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 121.1562 cm
+q
+q
+.87797 0 0 .87797 0 0 cm
+q
+1 0 0 1 6.6 7.517338 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 534 72 re B*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 50 Tm /F3 10 Tf 12 TL (% curl 'http://nirvana.ooc-lang.org/api/packages/helloworld/') Tj T* ({"0.1": "Wurst", "__result": "ok"}) Tj T* (% curl 'http://nirvana.ooc-lang.org/api/packages/helloworld/?type=details') Tj T* ({"category": "nonsense", "name": "Hello World!", "author": "fred", "versions": ["0.1"],) Tj T* ( "homepage": "", "slug": "helloworld", "latest_version": "0.1", "__result": "ok"}) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+ 
+endstream
+endobj
+% 'R27': class PDFStream 
+27 0 obj
+% page stream
+<< /Length 8007 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 750.0236 cm
+q
+BT 1 0 0 1 0 2.5 Tm 15 TL /F6 12.5 Tf 0 0 0 rg (Versions) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 732.0236 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F2 10 Tf 0 0 0 rg (Format) Tj /F1 10 Tf (:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 698.8236 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 468.6898 24 re B*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F3 10 Tf 12 TL (/packages/:package_slug/:version_slug/) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 62.69291 678.8236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Use this url to get information about a specific package's specific version.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 660.8236 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 0 rg (If ) Tj /F3 10 Tf (type ) Tj /F1 10 Tf (is ) Tj /F3 10 Tf (contents ) Tj /F1 10 Tf (\(default\), return a JSON object mapping variant slugs to variant names.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 642.8236 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 0 rg (If ) Tj /F3 10 Tf (type ) Tj /F1 10 Tf (is ) Tj /F3 10 Tf (details) Tj /F1 10 Tf (, return a JSON object containing the following values:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 636.8236 cm
+Q
+q
+1 0 0 1 62.69291 552.8236 cm
+0 0 0 rg
+BT /F5 10 Tf 12 TL ET
+BT 1 0 0 1 0 5 Tm  T* ET
+q
+1 0 0 1 23 81 cm
+Q
+q
+1 0 0 1 23 63 cm
+0 0 0 rg
+BT /F5 10 Tf 12 TL ET
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F3 10 Tf 12 TL (slug) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 23 63 cm
+Q
+q
+1 0 0 1 23 66 cm
+Q
+q
+1 0 0 1 23 48 cm
+0 0 0 rg
+BT /F5 10 Tf 12 TL ET
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F3 10 Tf 12 TL (name) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 23 48 cm
+Q
+q
+1 0 0 1 23 51 cm
+Q
+q
+1 0 0 1 23 33 cm
+0 0 0 rg
+BT /F5 10 Tf 12 TL ET
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 3 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F3 10 Tf 0 0 0 rg (package) Tj /F1 10 Tf (: package's slug.) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 23 33 cm
+Q
+q
+1 0 0 1 23 36 cm
+Q
+q
+1 0 0 1 23 18 cm
+0 0 0 rg
+BT /F5 10 Tf 12 TL ET
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 3 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F3 10 Tf 0 0 0 rg (latest) Tj /F1 10 Tf (: true if this version is marked as being the latest version.) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 23 18 cm
+Q
+q
+1 0 0 1 23 21 cm
+Q
+q
+1 0 0 1 23 3 cm
+0 0 0 rg
+BT /F5 10 Tf 12 TL ET
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 3 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F3 10 Tf 0 0 0 rg (variants) Tj /F1 10 Tf (: an array of variant slugs.) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 23 3 cm
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 552.8236 cm
+Q
+q
+1 0 0 1 62.69291 534.8236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Example:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 455.3441 cm
+q
+q
+.976496 0 0 .976496 0 0 cm
+q
+1 0 0 1 6.6 6.758862 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 480 72 re B*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 50 Tm /F3 10 Tf 12 TL (% curl 'http://nirvana.ooc-lang.org/api/packages/helloworld/0.1/') Tj T* ({"src": "Source", "linux-i686": "", "__result": "ok"}) Tj T* (% curl 'http://nirvana.ooc-lang.org/api/packages/helloworld/0.1/?type=details') Tj T* ({"name": "Wurst", "package": "helloworld", "__result": "ok",) Tj T* ( "variants": ["linux-i686", "src"], "slug": "0.1", "latest": true}) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 62.69291 428.3441 cm
+q
+BT 1 0 0 1 0 2.5 Tm 15 TL /F6 12.5 Tf 0 0 0 rg (Variant) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 410.3441 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F2 10 Tf 0 0 0 rg (Format) Tj /F1 10 Tf (:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 377.1441 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 468.6898 24 re B*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F3 10 Tf 12 TL (/packages/:package_slug/:version_slug/:variant_slug/) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 62.69291 357.1441 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Use this url to get information about a variant of a version of a package.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 339.1441 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 0 rg (No ) Tj /F3 10 Tf (type ) Tj /F1 10 Tf (parameter here.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 321.1441 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Return a JSON object containing the following values:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 315.1441 cm
+Q
+q
+1 0 0 1 62.69291 216.1441 cm
+0 0 0 rg
+BT /F5 10 Tf 12 TL ET
+BT 1 0 0 1 0 5 Tm  T* ET
+q
+1 0 0 1 23 96 cm
+Q
+q
+1 0 0 1 23 78 cm
+0 0 0 rg
+BT /F5 10 Tf 12 TL ET
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F3 10 Tf 12 TL (slug) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 23 78 cm
+Q
+q
+1 0 0 1 23 81 cm
+Q
+q
+1 0 0 1 23 63 cm
+0 0 0 rg
+BT /F5 10 Tf 12 TL ET
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F3 10 Tf 12 TL (name) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 23 63 cm
+Q
+q
+1 0 0 1 23 66 cm
+Q
+q
+1 0 0 1 23 48 cm
+0 0 0 rg
+BT /F5 10 Tf 12 TL ET
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 3 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F3 10 Tf 0 0 0 rg (version) Tj /F1 10 Tf (: version's slug.) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 23 48 cm
+Q
+q
+1 0 0 1 23 51 cm
+Q
+q
+1 0 0 1 23 33 cm
+0 0 0 rg
+BT /F5 10 Tf 12 TL ET
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F3 10 Tf 12 TL (usefile) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 23 33 cm
+Q
+q
+1 0 0 1 23 36 cm
+Q
+q
+1 0 0 1 23 18 cm
+0 0 0 rg
+BT /F5 10 Tf 12 TL ET
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F3 10 Tf 12 TL (checksums) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 23 18 cm
+Q
+q
+1 0 0 1 23 21 cm
+Q
+q
+1 0 0 1 23 3 cm
+0 0 0 rg
+BT /F5 10 Tf 12 TL ET
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F3 10 Tf 12 TL (checksums_signature) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 23 3 cm
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 216.1441 cm
+Q
+q
+1 0 0 1 62.69291 186.1441 cm
+q
+BT 1 0 0 1 0 14 Tm .979318 Tw 12 TL /F1 10 Tf 0 0 0 rg (The three latter values contain the urls of the usefile, checksums and checksums signature files. These) Tj T* 0 Tw (urls are relative to the nirvana ) Tj /F2 10 Tf (root ) Tj /F1 10 Tf (url \() Tj /F2 10 Tf (not ) Tj /F1 10 Tf (the api url\).) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 168.1441 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Examples:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 90.4038 cm
+q
+q
+.952737 0 0 .952737 0 0 cm
+q
+1 0 0 1 6.6 6.927412 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 492 72 re B*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 50 Tm /F3 10 Tf 12 TL (% curl 'http://nirvana.ooc-lang.org/api/packages/helloworld/0.1/src/') Tj T* ({"version": "0.1",) Tj T* ( "checksums_signature": "/packages/helloworld/0.1/src/helloworld.checksums.sig",) Tj T* ( "name": "Source", "usefile": "/packages/helloworld/0.1/src/helloworld.use",) Tj T* ( "checksums": "/packages/helloworld/0.1/src/helloworld.checksums",) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+ 
+endstream
+endobj
+% 'R28': class PDFStream 
+28 0 obj
+% page stream
+<< /Length 889 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 659.7035 cm
+q
+q
+.96447 0 0 .96447 0 0 cm
+q
+1 0 0 1 6.6 6.843137 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 486 108 re B*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 86 Tm /F3 10 Tf 12 TL ( "slug": "src", "__result": "ok"}) Tj T* (% curl 'http://nirvana.ooc-lang.org/packages/helloworld/0.1/src/helloworld.use') Tj T* (Name: Hello Woooorld!) Tj T* (Version: 0.1) Tj T* (Variant: src) Tj T* (Origin: meatshop://) Tj T* (Build: ooc helloworld.ooc) Tj T* (Binaries: helloworld) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 62.69291 626.7035 cm
+q
+BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (Questions?) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 608.7035 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (If you have any questions, feel free to ask them in our irc channel #ooc-lang on freenode.) Tj T* ET
+Q
+Q
+ 
+endstream
+endobj
+xref
+0 29
+0000000000 65535 f
+0000000113 00000 n
+0000000269 00000 n
+0000000434 00000 n
+0000000609 00000 n
+0000000770 00000 n
+0000000949 00000 n
+0000001230 00000 n
+0000001399 00000 n
+0000001586 00000 n
+0000001865 00000 n
+0000002145 00000 n
+0000002426 00000 n
+0000002564 00000 n
+0000002779 00000 n
+0000002905 00000 n
+0000003073 00000 n
+0000003297 00000 n
+0000003472 00000 n
+0000003660 00000 n
+0000003875 00000 n
+0000004046 00000 n
+0000004233 00000 n
+0000004401 00000 n
+0000004556 00000 n
+0000004689 00000 n
+0000010338 00000 n
+0000017686 00000 n
+0000025792 00000 n
+trailer
+<< /ID 
+ % ReportLab generated PDF document -- digest (http://www.reportlab.com) 
+ [(\300\346\344\376\022\241\2052TA\356\324!K\032\317) (\300\346\344\376\022\241\2052TA\356\324!K\032\317)] 
+
+ /Info 13 0 R
+ /Root 12 0 R
+ /Size 29 >>
+startxref
+26752
+%%EOF
