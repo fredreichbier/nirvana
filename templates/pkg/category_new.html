@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<form action="" method="POST">
+<form action="" method="POST">{% csrf_token %}
     <div class="fieldWrapper">
         {{ form.slug.errors }}
         <label for="id_slug">Slug:</label>

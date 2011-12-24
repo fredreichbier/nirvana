@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-<form action="" method="post">
+<form action="" method="post">{% csrf_token %}
     <div class="fieldWrapper">
         {{ form.slug.errors }}
         <label for="id_slug">Slug:</label>

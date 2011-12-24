@@ -43,7 +43,7 @@ urlpatterns = patterns('',
 
 
 
-    (r'^accounts/', include('registration.backends.default.urls')),
+    (r'^accounts/', include('registration.urls')),
 
     (r'^site_media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': '/home/fred/dev/ooc/nirvana/media'}), # TODO: only for development
 

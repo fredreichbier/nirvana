@@ -78,7 +78,7 @@ def get_api_token(user):
 
 def sign(checksum):
     proc = Popen(
-        ['/usr/bin/gpg',
+        ['/usr/bin/gpg2',
             '-q',
             '--batch',
             '-b',
