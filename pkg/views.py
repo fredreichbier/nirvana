@@ -505,6 +505,7 @@ def api_submit(request):
         urlresolvers.reverse('nirvana.pkg.views.variant',
             kwargs={'slug': package.slug, 'version_slug': dct['Version'], 'variant_slug': dct['Variant']})}
 
+@csrf_exempt
 @json_view
 def api_authorized(request):
     def _get(key):
