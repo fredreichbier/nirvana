@@ -1,6 +1,7 @@
 from django.http import HttpResponse, Http404
 from django.core import serializers, urlresolvers
 from django.template import RequestContext
+from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import render_to_response, get_object_or_404, redirect
 from django.contrib.auth import login
 from django.contrib.auth.models import User
@@ -462,6 +463,7 @@ def api_variant(request, slug, version_slug, variant_slug):
             ),
         }
 
+@csrf_exempt
 @json_view
 def api_submit(request):
     def _get(key):
@@ -485,7 +487,7 @@ def api_submit(request):
     # do we have such a package and such a version?
     package = get_object_or_404(Package, slug=slug)
     version = get_object_or_404(Version, package=package, slug=dct['Version'])
-    if not package.is_authorized_for_variant(user, dct['Variant']):
+    if not package.is_authorized_for_variant(user, dct['Variant'], True):
         raise Exception("You are not allowed to add this variant to this package.")
     if Variant.objects.filter(slug=dct['Variant'], version=version):
         raise Exception("A variant like this already exists.")
